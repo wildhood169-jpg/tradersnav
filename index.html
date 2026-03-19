@@ -503,12 +503,10 @@
 
 <script>
   // ─────────────────────────────────────────────────────
-  // EMAIL SETUP — Getform.io (free, no backend needed)
-  // 1. Go to https://getform.io and create a free account
-  // 2. Create a new form — copy your endpoint URL
-  // 3. Paste it below replacing YOUR_GETFORM_ENDPOINT
+  // EMAIL SETUP — Brevo API
   // ─────────────────────────────────────────────────────
-  const GETFORM_ENDPOINT = 'YOUR_GETFORM_ENDPOINT';
+  const BREVO_API_KEY = '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';
+  const BREVO_LIST_ID = 3;
 
   async function handleNotify(e){
     e.preventDefault();
@@ -523,18 +521,23 @@
     btn.disabled = true;
 
     try {
-      if(GETFORM_ENDPOINT !== 'YOUR_GETFORM_ENDPOINT'){
-        await fetch(GETFORM_ENDPOINT, {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-          body: JSON.stringify({email})
-        });
-      }
+      await fetch('https://api.brevo.com/v3/contacts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'api-key': BREVO_API_KEY
+        },
+        body: JSON.stringify({
+          email: email,
+          listIds: [BREVO_LIST_ID],
+          updateEnabled: true
+        })
+      });
       document.getElementById('notifyForm').style.display='none';
       document.getElementById('successMsg').style.display='block';
       document.querySelector('.form-note').style.display='none';
     } catch(err){
-      // Still show success — email captured client-side
       document.getElementById('notifyForm').style.display='none';
       document.getElementById('successMsg').style.display='block';
     }
@@ -551,3 +554,4 @@
 </script>
 </body>
 </html>
+
