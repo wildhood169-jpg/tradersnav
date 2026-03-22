@@ -57,7 +57,7 @@
       var(--dark)}
 
     /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,11,8,0.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,160,122,0.1)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(13,11,8,0.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,160,122,0.1);overflow:visible}
     .nav-top{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3.5rem}
     .nav-logo{display:flex;align-items:center;gap:0.9rem;text-decoration:none}
     .nav-logo img{width:36px;height:36px;border-radius:50%;object-fit:cover}
@@ -66,7 +66,7 @@
     .nav-badge{font-size:0.65rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose);background:rgba(201,160,122,0.1);border:1px solid rgba(201,160,122,0.25);padding:0.3rem 0.85rem;border-radius:100px}
 
     /* TOOLBAR */
-    .nav-toolbar{display:flex;align-items:center;gap:0;border-top:1px solid rgba(201,160,122,0.08);overflow-x:auto;scrollbar-width:none}
+    .nav-toolbar{display:flex;align-items:center;gap:0;border-top:1px solid rgba(201,160,122,0.08);overflow:visible;scrollbar-width:none}
     .nav-toolbar::-webkit-scrollbar{display:none}
     .tool-link{display:flex;align-items:center;gap:0.4rem;padding:0.55rem 1.4rem;font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;border-right:1px solid rgba(201,160,122,0.08);transition:all 0.2s;white-space:nowrap;flex-shrink:0}
     .tool-link:hover{color:var(--rose-light);background:rgba(201,160,122,0.05)}
@@ -82,11 +82,11 @@
     .drop-arrow{font-size:0.6rem;transition:transform 0.2s;display:inline-block;opacity:0.7}
     .nav-item:hover .drop-arrow,.nav-item.open .drop-arrow{transform:rotate(180deg);opacity:1}
     .dropdown{
-      position:absolute;top:calc(100% + 1px);left:0;
+      position:fixed;top:0;left:0;
       opacity:0;visibility:hidden;
       transform:translateY(-4px);
       transition:opacity 0.2s ease,transform 0.2s ease,visibility 0.2s;
-      z-index:9999;
+      z-index:99999;
       min-width:320px;
       background:rgba(13,11,8,0.98);
       backdrop-filter:blur(20px);
@@ -732,28 +732,51 @@
     });
   }
 
-  // Dropdown tap toggle for mobile
+  // Position a dropdown panel under its trigger
+  function positionDropdown(item) {
+    var trigger = item.querySelector('.drop-trigger');
+    var dropdown = item.querySelector('.dropdown');
+    if (!trigger || !dropdown) return;
+    var rect = trigger.getBoundingClientRect();
+    dropdown.style.top = (rect.bottom + 2) + 'px';
+    // Keep dropdown on screen horizontally
+    var ddWidth = Math.max(dropdown.offsetWidth, 320);
+    var left = rect.left;
+    if (left + ddWidth > window.innerWidth - 8) {
+      left = window.innerWidth - ddWidth - 8;
+    }
+    dropdown.style.left = Math.max(8, left) + 'px';
+  }
+
+  function openDrop(item) {
+    document.querySelectorAll('.nav-item').forEach(function(el){ el.classList.remove('open'); });
+    item.classList.add('open');
+    positionDropdown(item);
+  }
+
+  function closeAll() {
+    document.querySelectorAll('.nav-item').forEach(function(el){ el.classList.remove('open'); });
+  }
+
+  // Tap toggle for mobile
   function toggleDrop(id){
     try{ event.preventDefault(); event.stopPropagation(); }catch(e){}
     var item = document.getElementById(id);
     var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.nav-item').forEach(function(el){ el.classList.remove('open'); });
-    if(!isOpen){ item.classList.add('open'); }
+    closeAll();
+    if(!isOpen){ openDrop(item); }
     return false;
   }
+
+  // Close on outside click
   document.addEventListener('click', function(e){
-    if(!e.target.closest('.nav-item')){
-      document.querySelectorAll('.nav-item').forEach(function(el){ el.classList.remove('open'); });
-    }
+    if(!e.target.closest('.nav-item')){ closeAll(); }
   });
+
+  // Hover for desktop
   document.querySelectorAll('.nav-item').forEach(function(item){
-    item.addEventListener('mouseenter',function(){
-      document.querySelectorAll('.nav-item').forEach(function(el){ el.classList.remove('open'); });
-      item.classList.add('open');
-    });
-    item.addEventListener('mouseleave',function(){
-      item.classList.remove('open');
-    });
+    item.addEventListener('mouseenter', function(){ openDrop(item); });
+    item.addEventListener('mouseleave', function(){ item.classList.remove('open'); });
   });
 
   const c=document.getElementById('particles');
