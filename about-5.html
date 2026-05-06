@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | TradersNav</title>
+  <meta name="description" content="TradersNav is built by active prop traders. We verify real traders by funded account performance, review brokers and prop firms honestly, and never rank by marketing budget." />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="canonical" href="https://tradersnav.co/about.html" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8YJ6YRH1E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N8YJ6YRH1E');</script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --rose:#C9A07A;
+      --rose-bright:#E8B87A;
+      --rose-light:#F0CFA0;
+      --rose-dim:rgba(201,160,122,0.15);
+      --bg:#2A2218;
+      --bg2:#332B1E;
+      --bg3:#3D3325;
+      --card:#3A3025;
+      --card2:#423828;
+      --text:#F5EEE4;
+      --text2:#D4C8B8;
+      --muted:#9A8A75;
+      --border:rgba(201,160,122,0.2);
+      --glow:rgba(201,160,122,0.25);
+      --green:#5DE898;
+      --red:#FF7E7E;
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden;line-height:1.7}
+
+    /* BIG AMBIENT GLOW — full page */
+    .page-glow{
+      position:fixed;inset:0;pointer-events:none;z-index:0;
+      background:
+        radial-gradient(ellipse 70% 55% at 50% -10%, rgba(201,160,122,0.28) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 100% 50%, rgba(201,160,122,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse 45% 35% at 0% 70%, rgba(201,160,122,0.1) 0%, transparent 55%);
+    }
+
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(42,34,24,0.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(201,160,122,0.18);
+      padding:0.9rem 1.5rem;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none}
+    .nav-logo img{width:32px;height:32px;border-radius:50%;object-fit:cover}
+    .nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;letter-spacing:0.08em;color:var(--text)}
+    .nav-logo-text span{color:var(--rose)}
+    .nav-back{
+      display:inline-flex;align-items:center;gap:0.4rem;
+      padding:0.45rem 1rem;
+      border:1px solid rgba(201,160,122,0.3);
+      border-radius:50px;color:var(--muted);
+      font-size:0.78rem;letter-spacing:0.06em;
+      text-decoration:none;transition:all 0.2s;
+    }
+    .nav-back:hover{color:var(--rose);border-color:rgba(201,160,122,0.6);background:rgba(201,160,122,0.06)}
+
+    /* HERO — glowing top section */
+    .hero{
+      position:relative;z-index:1;
+      padding:4rem 1.5rem 3.5rem;
+      max-width:760px;margin:0 auto;
+      text-align:left;
+    }
+    .hero::after{
+      content:'';
+      position:absolute;top:-80px;left:50%;transform:translateX(-50%);
+      width:600px;height:300px;
+      background:radial-gradient(ellipse,rgba(201,160,122,0.18) 0%,transparent 70%);
+      pointer-events:none;
+    }
+    .eyebrow{
+      font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;
+      color:var(--rose-bright);
+      margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem;
+    }
+    .eyebrow::before{content:'';width:24px;height:1px;background:var(--rose-bright)}
+    h1{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(2.4rem,7vw,3.6rem);
+      font-weight:700;line-height:1.12;margin-bottom:1.3rem;
+      background:linear-gradient(145deg,#FFFFFF 0%,var(--rose-light) 60%,var(--rose) 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    }
+    h1 em{font-style:italic}
+    .lead{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.12rem;color:var(--text2);line-height:1.7;
+      font-style:italic;
+      border-left:2px solid var(--rose);
+      padding-left:1rem;
+      max-width:560px;
+    }
+
+    /* MAIN */
+    main{max-width:760px;margin:0 auto;padding:0 1.5rem 6rem;position:relative;z-index:1}
+
+    /* STAT ROW — glowing cards */
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.5rem 0}
+    @media(max-width:500px){.stat-row{grid-template-columns:1fr}}
+    .stat-card{
+      background:linear-gradient(145deg, rgba(201,160,122,0.18) 0%, rgba(58,48,37,0.9) 60%);
+      border:1px solid rgba(201,160,122,0.35);
+      border-radius:16px;padding:1.75rem 1rem;text-align:center;
+      position:relative;overflow:hidden;
+      box-shadow:0 0 30px rgba(201,160,122,0.12), inset 0 1px 0 rgba(201,160,122,0.15);
+      transition:transform 0.25s,box-shadow 0.25s;cursor:default;
+    }
+    .stat-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 0 50px rgba(201,160,122,0.22), 0 8px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(201,160,122,0.2);
+    }
+    .stat-card::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(201,160,122,0.6),transparent);
+    }
+    .stat-num{
+      font-family:'Cormorant Garamond',serif;
+      font-size:3rem;font-weight:700;
+      color:var(--rose-bright);line-height:1;margin-bottom:0.5rem;
+      text-shadow:0 0 20px rgba(201,160,122,0.4);
+    }
+    .stat-desc{font-size:0.76rem;color:var(--text2);line-height:1.45}
+
+    /* SECTION DIVIDER */
+    .divider{
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(201,160,122,0.3),transparent);
+      margin:3rem 0;
+    }
+
+    h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.75rem;font-weight:600;color:var(--text);
+      margin-bottom:1rem;padding-bottom:0.6rem;
+      border-bottom:1px solid rgba(201,160,122,0.15);
+    }
+    p{font-size:0.92rem;color:var(--text2);line-height:1.85;margin-bottom:0.9rem}
+    p:last-child{margin-bottom:0}
+    strong{color:var(--rose-light);font-weight:600}
+
+    /* USP BOX — glowing */
+    .usp-box{
+      background:linear-gradient(145deg, rgba(201,160,122,0.14) 0%, rgba(58,48,37,0.6) 100%);
+      border:1px solid rgba(201,160,122,0.4);
+      border-radius:16px;padding:1.75rem;margin:1.5rem 0;
+      position:relative;overflow:hidden;
+      box-shadow:0 0 40px rgba(201,160,122,0.1), inset 0 1px 0 rgba(201,160,122,0.2);
+    }
+    .usp-box::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:2px;
+      background:linear-gradient(90deg,transparent,var(--rose),transparent);
+    }
+    .usp-label{font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--rose-bright);margin-bottom:0.5rem}
+    .usp-heading{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--text);line-height:1.3;margin-bottom:0.75rem}
+    .usp-text{font-size:0.88rem;color:var(--text2);line-height:1.65;margin-bottom:1rem}
+    .pill-row{display:flex;gap:0.5rem;flex-wrap:wrap}
+    .pill{
+      font-size:0.7rem;font-weight:600;padding:0.28rem 0.75rem;border-radius:100px;
+      background:rgba(201,160,122,0.14);color:var(--rose-bright);
+      border:1px solid rgba(201,160,122,0.35);
+      text-shadow:0 0 8px rgba(201,160,122,0.3);
+    }
+
+    /* VALUES GRID */
+    .values{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+    @media(max-width:480px){.values{grid-template-columns:1fr}}
+    .value-card{
+      background:linear-gradient(145deg, rgba(66,56,40,0.9), rgba(52,44,32,0.95));
+      border:1px solid rgba(201,160,122,0.2);
+      border-radius:14px;padding:1.4rem;
+      transition:all 0.25s;cursor:default;
+      position:relative;overflow:hidden;
+    }
+    .value-card::after{
+      content:'';position:absolute;top:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(201,160,122,0.4),transparent);
+      opacity:0;transition:opacity 0.3s;
+    }
+    .value-card:hover{
+      border-color:rgba(201,160,122,0.45);
+      transform:translateY(-2px);
+      box-shadow:0 8px 30px rgba(0,0,0,0.3), 0 0 20px rgba(201,160,122,0.1);
+    }
+    .value-card:hover::after{opacity:1}
+    .value-icon{width:36px;height:36px;margin-bottom:0.75rem;display:block}
+    .value-title{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-weight:600;color:var(--rose-light);margin-bottom:0.35rem}
+    .value-desc{font-size:0.82rem;color:var(--muted);line-height:1.55}
+
+    /* LISTS */
+    .yes-list,.not-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin:1rem 0}
+    .yes-list li,.not-list li{
+      font-size:0.88rem;color:var(--text2);
+      display:flex;align-items:flex-start;gap:0.65rem;
+      padding:0.65rem 0.9rem;
+      background:rgba(201,160,122,0.04);
+      border:1px solid rgba(201,160,122,0.12);
+      border-radius:10px;line-height:1.5;
+      transition:all 0.2s;
+    }
+    .yes-list li:hover{background:rgba(93,232,152,0.05);border-color:rgba(93,232,152,0.2)}
+    .not-list li:hover{background:rgba(255,126,126,0.05);border-color:rgba(255,126,126,0.2)}
+    .list-icon{flex-shrink:0;width:16px;height:16px;margin-top:2px}
+
+    /* CTA */
+    .cta-row{display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:2rem}
+    .btn{display:inline-block;padding:0.72rem 1.5rem;font-size:0.84rem;font-weight:600;letter-spacing:0.04em;border-radius:9px;text-decoration:none;transition:all 0.2s}
+    .btn-primary{
+      background:linear-gradient(135deg,var(--rose) 0%,var(--rose-bright) 100%);
+      color:#1A1208;
+      box-shadow:0 4px 18px rgba(201,160,122,0.3);
+    }
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(201,160,122,0.4)}
+    .btn-ghost{border:1px solid rgba(201,160,122,0.3);color:var(--muted)}
+    .btn-ghost:hover{border-color:var(--rose);color:var(--rose-light)}
+
+    /* GLOW SECTION — surrounding commitment */
+    .glow-section{
+      position:relative;border-radius:20px;
+      background:linear-gradient(145deg,rgba(201,160,122,0.1) 0%,rgba(42,34,24,0.5) 100%);
+      border:1px solid rgba(201,160,122,0.25);
+      padding:2rem;margin:1rem 0;
+      overflow:hidden;
+    }
+    .glow-section::before{
+      content:'';position:absolute;
+      bottom:-40px;right:-40px;
+      width:200px;height:200px;
+      background:radial-gradient(circle,rgba(201,160,122,0.14) 0%,transparent 70%);
+      pointer-events:none;
+    }
+
+    /* FADE */
+    .fade{opacity:0;transform:translateY(18px);transition:opacity 0.6s ease,transform 0.6s ease}
+    .fade.in{opacity:1;transform:none}
+
+    /* FOOTER */
+    footer{
+      background:var(--bg2);
+      border-top:1px solid rgba(201,160,122,0.15);
+      padding:2.5rem 1.5rem;text-align:center;
+      font-size:0.74rem;color:var(--muted);line-height:1.9;
+      position:relative;z-index:1;
+    }
+    footer::before{
+      content:'';display:block;
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(201,160,122,0.4),transparent);
+      margin-bottom:2.5rem;
+    }
+    footer a{color:var(--rose);text-decoration:none}
+    .footer-brand{
+      font-family:'Cormorant Garamond',serif;font-size:1.1rem;
+      color:var(--text);display:block;margin-bottom:0.75rem;
+      font-weight:700;letter-spacing:0.1em;
+    }
+    .footer-brand span{color:var(--rose-bright)}
+  </style>
+</head>
+<body>
+<div class="page-glow"></div>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="/favicon.png" alt="TradersNav" />
+    <span class="nav-logo-text">TRADERS<span>NAV</span></span>
+  </a>
+  <a href="/" class="nav-back">← Home</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="eyebrow fade">About TradersNav</span>
+  <h1 class="fade">Built by traders.<br><em>For traders.</em></h1>
+  <p class="lead fade">We started TradersNav because the trading education space is broken — full of fake gurus, paid rankings, and recycled content. We're fixing that.</p>
+</div>
+
+<main>
+
+  <!-- GLOWING STAT ROW -->
+  <div class="stat-row fade">
+    <div class="stat-card">
+      <div class="stat-num" style="font-size:2.1rem;letter-spacing:-0.02em">Free</div>
+      <div class="stat-desc">No paid rankings.<br>Merit only.</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">100%</div>
+      <div class="stat-desc">Verified traders only.<br>No claims, just proof.</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" style="font-size:2.1rem;letter-spacing:-0.02em">Real</div>
+      <div class="stat-desc">Active prop traders<br>behind every review.</div>
+    </div>
+  </div>
+
+  <div class="divider fade"></div>
+
+  <!-- MISSION -->
+  <div class="fade">
+    <h2>Our Mission</h2>
+    <div class="usp-box">
+      <div class="usp-label">Core USP</div>
+      <div class="usp-heading">Verified traders. Real prop firm reviews. No fake gurus.</div>
+      <p class="usp-text">Every trader listed on TradersNav goes through a verification process — prop firm credentials, live trading data, and performance history. If you can't prove it, you don't get listed.</p>
+      <div class="pill-row">
+        <span class="pill">✓ Prop firm verified</span>
+        <span class="pill">✓ Live track record</span>
+        <span class="pill">✓ No paid placement</span>
+      </div>
+    </div>
+    <p>We also curate and review the tools traders actually need — prop firms, brokers, charting platforms, and trading journals. We focus on <strong>new and intermediate traders</strong> who need honest guidance, not marketing spin.</p>
+  </div>
+
+  <div class="divider fade"></div>
+
+  <!-- WHAT WE ARE -->
+  <div class="fade">
+    <h2>What We Are</h2>
+    <ul class="yes-list">
+      <li>
+        <svg class="list-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#5DE898" stroke-opacity="0.5"/><path d="M5 8l2 2 4-4" stroke="#5DE898" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        The first platform verifying real traders by actual prop firm performance — not claims
+      </li>
+      <li>
+        <svg class="list-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#5DE898" stroke-opacity="0.5"/><path d="M5 8l2 2 4-4" stroke="#5DE898" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Active traders ourselves — we trade, we pass challenges, we know what matters
+      </li>
+      <li>
+        <svg class="list-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#5DE898" stroke-opacity="0.5"/><path d="M5 8l2 2 4-4" stroke="#5DE898" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        An independent review platform with zero paid rankings
+      </li>
+      <li>
+        <svg class="list-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#5DE898" stroke-opacity="0.5"/><path d="M5 8l2 2 4-4" stroke="#5DE898" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Transparent about every affiliate relationship on every page that has one
+      </li>
+      <li>
+        <svg class="list-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#5DE898" stroke-opacity="0.5"/><path d="M5 8l2 2 4-4" stroke="#5DE898" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Committed to honest pros and cons — if something isn't worth it, we say so
+      </li>
+    </ul>
+  </div>
+
+  <div class="fade">
+    <h2>What We Are Not</h2>
+    <ul class="not-list">
+      <li>
+        <svg class="list-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#FF7E7E" stroke-opacity="0.5"/><path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#FF7E7E" stroke-width="1.5" stroke-linecap="round"/></svg>
+        A signal service or advisory — we don't tell you when to buy or sell
+      </li>
+      <li>
+        <svg class="list-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#FF7E7E" stroke-opacity="0.5"/><path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#FF7E7E" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Regulated financial advisors — nothing here is financial advice
+      </li>
+      <li>
+        <svg class="list-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#FF7E7E" stroke-opacity="0.5"/><path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#FF7E7E" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Exclusively affiliated with any single firm, broker, or tool
+      </li>
+      <li>
+        <svg class="list-icon" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#FF7E7E" stroke-opacity="0.5"/><path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#FF7E7E" stroke-width="1.5" stroke-linecap="round"/></svg>
+        A content farm — every review is written with real context, not SEO filler
+      </li>
+    </ul>
+  </div>
+
+  <div class="divider fade"></div>
+
+  <!-- VALUES -->
+  <div class="fade">
+    <h2>Our Values</h2>
+    <div class="values">
+      <div class="value-card">
+        <svg class="value-icon" viewBox="0 0 38 38" fill="none">
+          <circle cx="19" cy="19" r="16" stroke="#C9A07A" stroke-opacity="0.35" stroke-width="1.5"/>
+          <circle cx="19" cy="19" r="2.5" fill="#C9A07A"/>
+          <line x1="19" y1="6" x2="19" y2="9" stroke="#C9A07A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="19" y1="29" x2="19" y2="32" stroke="#C9A07A" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="29" y1="19" x2="32" y2="19" stroke="#C9A07A" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="6" y1="19" x2="9" y2="19" stroke="#C9A07A" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M19 19L15.5 27L19 23L22.5 27Z" fill="#C9A07A" fill-opacity="0.2" stroke="#C9A07A" stroke-width="0.8"/>
+          <path d="M19 19L22.5 11L19 15L15.5 11Z" fill="#C9A07A" stroke="#C9A07A" stroke-width="0.8"/>
+        </svg>
+        <div class="value-title">Honest Direction</div>
+        <div class="value-desc">We tell you what we actually think — including when something isn't worth your money.</div>
+      </div>
+      <div class="value-card">
+        <svg class="value-icon" viewBox="0 0 38 38" fill="none">
+          <rect x="1.5" y="1.5" width="35" height="35" rx="9" stroke="#C9A07A" stroke-opacity="0.25" stroke-width="1"/>
+          <path d="M22 7L11 22h8.5l-4 9L28 15h-8.5L22 7z" fill="#C9A07A" fill-opacity="0.18" stroke="#C9A07A" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <div class="value-title">No Fluff</div>
+        <div class="value-desc">Real traders don't have time for padding. Our reviews get straight to the point.</div>
+      </div>
+      <div class="value-card">
+        <svg class="value-icon" viewBox="0 0 38 38" fill="none">
+          <circle cx="15.5" cy="15.5" r="9.5" stroke="#C9A07A" stroke-width="1.5" stroke-opacity="0.7"/>
+          <circle cx="15.5" cy="15.5" r="5" stroke="#C9A07A" stroke-width="1" stroke-opacity="0.3"/>
+          <circle cx="14" cy="13.5" r="1.5" fill="#C9A07A" fill-opacity="0.45"/>
+          <line x1="22.5" y1="22.5" x2="33" y2="33" stroke="#C9A07A" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="value-title">Independent Research</div>
+        <div class="value-desc">Rankings reflect merit, not marketing budgets. Always researched independently.</div>
+      </div>
+      <div class="value-card">
+        <svg class="value-icon" viewBox="0 0 38 38" fill="none">
+          <path d="M7 20c0-3.5 2.5-6 5.5-6 1.5 0 2.8.6 3.5 1.5" stroke="#C9A07A" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+          <path d="M31 20c0-3.5-2.5-6-5.5-6-1.5 0-2.8.6-3.5 1.5" stroke="#C9A07A" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+          <path d="M16 15.5C16.7 14.6 17.9 14 19 14s2.3.6 3 1.5" stroke="#C9A07A" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M12.5 14v8a6.5 6.5 0 0013 0v-8" stroke="#C9A07A" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.6"/>
+          <circle cx="19" cy="22" r="3.5" fill="#C9A07A" fill-opacity="0.15" stroke="#C9A07A" stroke-width="1"/>
+        </svg>
+        <div class="value-title">Trader First</div>
+        <div class="value-desc">When affiliate income conflicts with honest advice, honest advice wins. Every time.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider fade"></div>
+
+  <!-- COMMITMENT — glowing section -->
+  <div class="fade">
+    <div class="glow-section">
+      <h2 style="border:none;padding:0;margin-bottom:1.25rem">Our Commitment to You</h2>
+      <p>TradersNav is built on one promise: <strong>you will always find real, verified information here</strong> — not paid placements, not recycled content, not fake results. We are continuously researching, updating, and expanding what we cover so you never have to second-guess whether a trader, tool, or prop firm is worth your time and money.</p>
+      <p>We are the first platform in this space dedicated to connecting new traders with <strong>verified, proven traders</strong> — people with real funded accounts and trackable performance history. As the space grows noisier, our standard stays the same: if it can't be verified, it doesn't belong here.</p>
+      <p>Every review gets updated when things change. Every trader listed gets re-verified. Every recommendation is based on research — not revenue.</p>
+      <div class="cta-row">
+        <a href="/" class="btn btn-primary">Explore the Tools →</a>
+        <a href="/blog-ftmo-review.html" class="btn btn-ghost">Read Our First Review</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <span class="footer-brand">TRADERS<span>NAV</span></span>
+  <p>
+    <a href="/">Home</a> &nbsp;·&nbsp;
+    <a href="/about.html">About</a> &nbsp;·&nbsp;
+    <a href="/blog.html">Reviews</a> &nbsp;·&nbsp;
+    <a href="/disclaimer.html">Disclaimer</a>
+  </p>
+  <p style="margin-top:1rem;font-size:0.7rem;max-width:540px;margin-inline:auto;color:var(--muted)">Trading involves significant risk of loss. Nothing on TradersNav constitutes financial advice.</p>
+  <p style="margin-top:0.5rem;font-size:0.68rem;color:rgba(154,138,117,0.5)">© 2026 TradersNav. All rights reserved.</p>
+</footer>
+
+<script>
+  // Scroll fade-in
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}
+  }), {threshold:0.07, rootMargin:'0px 0px -20px 0px'});
+  document.querySelectorAll('.fade').forEach((el,i) => {
+    el.style.transitionDelay = i * 0.04 + 's';
+    obs.observe(el);
+  });
+
+  // Mouse-follow glow on cards
+  document.querySelectorAll('.value-card, .stat-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width * 100).toFixed(1);
+      const y = ((e.clientY - r.top) / r.height * 100).toFixed(1);
+      card.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(201,160,122,0.18) 0%, rgba(52,44,32,0.95) 65%)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.background = ''; });
+  });
+</script>
+</body>
+</html>
