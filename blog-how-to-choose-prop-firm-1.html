@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Choose the Right Prop Firm as a Beginner | TradersNav</title>
+  <meta name="description" content="Don't buy a prop firm challenge before reading this. Learn how to choose the right prop firm based on your strategy, risk style, and budget — from an active prop trader."/>
+  <link rel="canonical" href="https://tradersnav.co/blog-how-to-choose-prop-firm.html"/>
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8YJ6YRH1E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N8YJ6YRH1E');</script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --rose:#C9A07A;--rose-b:#E8B87A;--rose-l:#F0D0A0;
+      --dark:#13100C;--d2:#181410;--d3:#1E1A13;--d4:#242018;--d5:#2A2620;
+      --text:#F0EAE0;--text2:#D4C8B8;--muted:#9A8A78;--mid:#6B5F50;
+      --border:rgba(201,160,122,0.15);--border2:rgba(201,160,122,0.25);
+      --glow:rgba(201,160,122,0.18);
+      --green:#3ECF7A;--gdim:rgba(62,207,122,0.1);
+      --red:#E05555;--rdim:rgba(224,85,85,0.1);
+      --blue:#6AADDF;--bdim:rgba(106,173,223,0.1);
+    }
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--dark);
+      color:var(--text);
+      font-family:'DM Sans',sans-serif;
+      overflow-x:hidden;
+    }
+
+    /* AMBIENT PAGE GLOW */
+    .page-ambient{
+      position:fixed;inset:0;pointer-events:none;z-index:0;
+      background:
+        radial-gradient(ellipse 60% 40% at 80% 10%, rgba(201,160,122,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 35% at 20% 80%, rgba(201,160,122,0.06) 0%, transparent 55%);
+    }
+
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(19,16,12,0.96);backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--border);
+      padding:0.9rem 1.5rem;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;letter-spacing:0.08em;color:var(--text);text-decoration:none}
+    .nav-logo span{color:var(--rose)}
+    .nav-back{padding:0.4rem 0.9rem;border:1px solid var(--border);border-radius:50px;color:var(--muted);font-size:0.76rem;text-decoration:none;transition:all 0.2s}
+    .nav-back:hover{color:var(--rose);border-color:var(--border2)}
+
+    /* HERO */
+    .hero{
+      position:relative;overflow:hidden;
+      padding:5rem 1.5rem 4rem;
+      z-index:1;
+      background:radial-gradient(ellipse 80% 60% at 50% -10%, rgba(201,160,122,0.13) 0%, transparent 65%);
+    }
+    /* Animated shimmer line across hero */
+    .hero::after{
+      content:'';position:absolute;
+      bottom:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(201,160,122,0.35),transparent);
+    }
+    .hero-inner{max-width:680px;margin:0 auto;position:relative;z-index:1;text-align:center}
+    .cat-pill{
+      display:inline-flex;align-items:center;gap:0.45rem;
+      font-size:0.63rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;
+      color:var(--rose);background:rgba(201,160,122,0.08);
+      border:1px solid var(--border2);padding:0.3rem 0.9rem;border-radius:50px;
+      margin-bottom:1.75rem;
+    }
+    .cat-pill::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--rose);animation:pdot 2s ease-in-out infinite}
+    @keyframes pdot{0%,100%{opacity:1}50%{opacity:0.35}}
+    .hero h1{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(2.6rem,8vw,4rem);
+      font-weight:700;line-height:1.08;margin-bottom:1.5rem;
+      background:linear-gradient(160deg,#FFFFFF 0%,var(--rose-l) 50%,var(--rose) 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+      letter-spacing:-0.01em;
+    }
+    .hero-tagline{
+      font-size:1rem;color:var(--muted);
+      line-height:1.7;max-width:460px;margin:0 auto 2rem;
+    }
+    .hero-meta{
+      display:inline-flex;gap:0;flex-wrap:wrap;justify-content:center;
+      font-size:0.72rem;color:var(--muted);
+      background:rgba(201,160,122,0.05);border:1px solid var(--border);
+      border-radius:50px;overflow:hidden;
+    }
+    .hero-meta span{padding:0.5rem 1rem;border-right:1px solid var(--border)}
+    .hero-meta span:last-child{border-right:none}
+
+    /* GLOW DIVIDER between sections */
+    .glow-div{
+      height:1px;
+      background:linear-gradient(90deg,transparent,rgba(201,160,122,0.4),transparent);
+      margin:0;position:relative;
+    }
+    .glow-div::after{
+      content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%);
+      width:120px;height:16px;
+      background:radial-gradient(ellipse,rgba(201,160,122,0.25) 0%,transparent 70%);
+    }
+
+    /* TOC */
+    .toc-wrap{
+      padding:2.5rem 1.5rem;position:relative;z-index:1;
+    }
+    .toc-inner{max-width:680px;margin:0 auto}
+    .toc-label{font-size:0.6rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose);margin-bottom:1.25rem;text-align:center}
+    .toc-grid{display:flex;flex-direction:column;gap:0.4rem}
+    .toc-item{
+      display:flex;align-items:center;gap:1rem;
+      padding:0.8rem 1.1rem;
+      background:var(--d2);border:1px solid var(--border);border-radius:10px;
+      text-decoration:none;transition:all 0.2s;
+      position:relative;overflow:hidden;
+    }
+    .toc-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--rose);opacity:0;transition:opacity 0.2s}
+    .toc-item:hover{border-color:var(--border2);background:var(--d3);padding-left:1.4rem}
+    .toc-item:hover::before{opacity:1}
+    .toc-num{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--rose);min-width:26px;opacity:0.7}
+    .toc-text{font-size:0.85rem;color:var(--text2);font-weight:500}
+    .toc-arrow{margin-left:auto;color:var(--muted);font-size:0.75rem;opacity:0;transition:opacity 0.2s}
+    .toc-item:hover .toc-arrow{opacity:1}
+
+    /* SECTION WRAPPER */
+    .sec{padding:3.5rem 1.5rem;position:relative;z-index:1}
+    .sec-inner{max-width:720px;margin:0 auto}
+    .sec-alt{background:var(--d2)}
+    .eyebrow{font-size:0.6rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem}
+    .eyebrow::before{content:'';width:18px;height:1px;background:var(--rose)}
+    h2{font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:700;color:var(--text);margin-bottom:1rem;line-height:1.2;scroll-margin-top:70px}
+    h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--rose-l);margin:2rem 0 0.6rem}
+    p{font-size:0.92rem;color:var(--text2);line-height:1.85;margin-bottom:1rem}
+    p:last-child{margin-bottom:0}
+    strong{color:var(--rose-l);font-weight:600}
+    a{color:var(--rose);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* GLOWING CARDS — main reusable card style */
+    .gcard{
+      background:linear-gradient(145deg,rgba(201,160,122,0.09) 0%,rgba(30,26,19,0.95) 60%);
+      border:1px solid var(--border2);border-radius:14px;padding:1.4rem;
+      position:relative;overflow:hidden;
+      transition:box-shadow 0.25s,border-color 0.25s,transform 0.2s;
+    }
+    .gcard::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(201,160,122,0.5),transparent);
+    }
+    .gcard:hover{
+      box-shadow:0 0 30px rgba(201,160,122,0.12),0 8px 24px rgba(0,0,0,0.3);
+      border-color:rgba(201,160,122,0.4);
+      transform:translateY(-2px);
+    }
+
+    /* MISTAKE CARDS */
+    .mistake-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+    @media(max-width:500px){.mistake-grid{grid-template-columns:1fr}}
+    .mistake-card{
+      background:rgba(224,85,85,0.06);
+      border:1px solid rgba(224,85,85,0.25);
+      border-radius:14px;padding:1.4rem;
+      position:relative;overflow:hidden;
+    }
+    .mistake-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(224,85,85,0.4),transparent)}
+    .mistake-num{font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);margin-bottom:0.6rem}
+    .mistake-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:0.5rem}
+    .mistake-desc{font-size:0.83rem;color:var(--muted);line-height:1.6}
+
+    /* CALLOUTS */
+    .callout{border-radius:12px;padding:1.1rem 1.3rem;margin:1.75rem 0;position:relative;overflow:hidden}
+    .callout::before{content:'';position:absolute;top:0;left:0;right:0;height:1px}
+    .c-warn{background:var(--rdim);border:1px solid rgba(224,85,85,0.25);border-left:3px solid var(--red)}
+    .c-warn::before{background:linear-gradient(90deg,var(--red),transparent)}
+    .c-tip{background:var(--gdim);border:1px solid rgba(62,207,122,0.25);border-left:3px solid var(--green)}
+    .c-tip::before{background:linear-gradient(90deg,var(--green),transparent)}
+    .c-key{background:rgba(201,160,122,0.07);border:1px solid var(--border2);border-left:3px solid var(--rose)}
+    .c-key::before{background:linear-gradient(90deg,var(--rose),transparent)}
+    .c-label{font-size:0.59rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.4rem}
+    .c-warn .c-label{color:var(--red)}
+    .c-tip .c-label{color:var(--green)}
+    .c-key .c-label{color:var(--rose)}
+    .callout p{font-size:0.88rem;line-height:1.65;margin:0;color:var(--text2)}
+
+    /* PULL QUOTE */
+    .pquote{
+      margin:2rem 0;padding:1.5rem 1.5rem 1.5rem 2.5rem;
+      background:rgba(201,160,122,0.06);
+      border-left:3px solid var(--rose);border-radius:0 12px 12px 0;
+      position:relative;
+    }
+    .pquote::before{
+      content:'"';font-family:'Cormorant Garamond',serif;
+      font-size:5rem;line-height:0.7;
+      color:var(--rose);opacity:0.25;
+      position:absolute;top:0.8rem;left:0.6rem;
+    }
+    .pquote p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--text);line-height:1.6;margin:0}
+
+    /* STEP CARDS */
+    .steps{display:flex;flex-direction:column;gap:0.85rem;margin:1.5rem 0}
+    .step{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem;background:var(--d3);border:1px solid var(--border);border-radius:12px;transition:border-color 0.2s,background 0.2s}
+    .step:hover{border-color:var(--border2);background:var(--d4)}
+    .snum{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--rose);line-height:1;min-width:36px}
+    .stitle{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:0.3rem}
+    .sdesc{font-size:0.83rem;color:var(--muted);line-height:1.6}
+
+    /* CHECKLIST */
+    .checklist{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin:1.25rem 0}
+    .checklist li{display:flex;align-items:flex-start;gap:0.65rem;font-size:0.88rem;color:var(--text2);padding:0.65rem 0.9rem;background:var(--d3);border:1px solid var(--border);border-radius:9px;line-height:1.5;transition:border-color 0.2s}
+    .checklist li:hover{border-color:rgba(62,207,122,0.25)}
+    .checklist li svg{flex-shrink:0;margin-top:1px}
+
+    /* SCALING VISUAL */
+    .scale-row{display:flex;align-items:flex-end;gap:0.5rem;margin:2rem 0;padding:1.5rem;background:var(--d3);border:1px solid var(--border);border-radius:14px;position:relative;overflow:hidden}
+    .scale-row::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,160,122,0.2),transparent)}
+    .scale-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:0.5rem}
+    .scale-bar{
+      width:100%;border-radius:8px 8px 0 0;
+      background:linear-gradient(180deg,rgba(201,160,122,0.35),rgba(201,160,122,0.1));
+      border:1px solid rgba(201,160,122,0.3);border-bottom:none;
+      position:relative;transition:all 0.3s;cursor:default;
+    }
+    .scale-bar:hover{background:linear-gradient(180deg,rgba(201,160,122,0.5),rgba(201,160,122,0.15));border-color:rgba(201,160,122,0.5)}
+    .scale-bar.highlight{
+      background:linear-gradient(180deg,rgba(232,184,122,0.5),rgba(201,160,122,0.2));
+      border-color:rgba(232,184,122,0.6);
+      box-shadow:0 -4px 20px rgba(201,160,122,0.2);
+    }
+    .scale-label-top{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--rose-b);text-align:center;margin-bottom:0.25rem}
+    .scale-label-bot{font-size:0.68rem;color:var(--muted);text-align:center;line-height:1.3}
+    .scale-label-top.dim{color:var(--muted);font-size:0.85rem}
+    .scale-arrow{display:flex;align-items:center;color:var(--border2);font-size:1rem;padding-bottom:2rem}
+
+    /* STRATEGY CARDS */
+    .strategy-grid{display:grid;grid-template-columns:1fr;gap:0.85rem;margin:1.5rem 0}
+    .strategy-card{
+      background:var(--d3);border:1px solid var(--border);border-radius:14px;overflow:hidden;
+      transition:border-color 0.2s;
+    }
+    .strategy-card:hover{border-color:var(--border2)}
+    .strategy-head{
+      display:flex;align-items:center;gap:0.75rem;
+      padding:0.9rem 1.2rem;
+      background:linear-gradient(90deg,rgba(201,160,122,0.1),transparent);
+      border-bottom:1px solid var(--border);
+    }
+    .strategy-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.9rem}
+    .strategy-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--text)}
+    .strategy-body{padding:1rem 1.2rem}
+    .strategy-tags{display:flex;flex-wrap:wrap;gap:0.4rem}
+    .stag{font-size:0.72rem;font-weight:600;padding:0.22rem 0.6rem;border-radius:6px;letter-spacing:0.02em}
+    .stag-need{background:rgba(62,207,122,0.1);color:var(--green);border:1px solid rgba(62,207,122,0.2)}
+    .stag-avoid{background:var(--rdim);color:var(--red);border:1px solid rgba(224,85,85,0.2)}
+
+    /* RULE CARDS */
+    .rule-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin:1.5rem 0}
+    @media(max-width:500px){.rule-grid{grid-template-columns:1fr}}
+    .rule-card{
+      background:var(--d3);border:1px solid var(--border);border-radius:12px;
+      padding:1.1rem;transition:border-color 0.2s,transform 0.2s;
+    }
+    .rule-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+    .rule-head{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem}
+    .rule-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+    .dot-red{background:var(--red);box-shadow:0 0 6px rgba(224,85,85,0.5)}
+    .dot-green{background:var(--green);box-shadow:0 0 6px rgba(62,207,122,0.5)}
+    .rule-title{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:700;color:var(--text)}
+    .rule-desc{font-size:0.79rem;color:var(--muted);line-height:1.55;margin-bottom:0.6rem}
+    .rule-flag{font-size:0.68rem;font-weight:700;padding:0.18rem 0.55rem;border-radius:6px;display:inline-block}
+    .flag-red{background:var(--rdim);color:var(--red)}
+    .flag-green{background:var(--gdim);color:var(--green)}
+
+    /* FIRM CARDS */
+    .firm-cards{display:flex;flex-direction:column;gap:1.1rem;margin:1.5rem 0}
+    .firm-card{
+      background:var(--d3);
+      border:1px solid var(--border);
+      border-radius:16px;overflow:hidden;
+      transition:border-color 0.2s,box-shadow 0.2s;
+      position:relative;
+    }
+    .firm-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,160,122,0.4),transparent)}
+    .firm-card:hover{border-color:var(--border2);box-shadow:0 0 24px rgba(201,160,122,0.1)}
+    .firm-head{padding:1rem 1.3rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:rgba(201,160,122,0.05)}
+    .firm-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--text)}
+    .firm-badge{font-size:0.65rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:100px;letter-spacing:0.04em}
+    .badge-g{background:rgba(62,207,122,0.12);color:var(--green);border:1px solid rgba(62,207,122,0.25)}
+    .badge-b{background:var(--bdim);color:var(--blue);border:1px solid rgba(106,173,223,0.25)}
+    .badge-r{background:rgba(201,160,122,0.12);color:var(--rose);border:1px solid var(--border2)}
+    .firm-body{padding:1.2rem 1.3rem}
+    .firm-body p{font-size:0.88rem;color:var(--text2);line-height:1.75;margin-bottom:0.9rem}
+    .firm-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.85rem}
+    .ftag{font-size:0.7rem;font-weight:500;padding:0.18rem 0.55rem;border-radius:6px;background:rgba(201,160,122,0.08);color:var(--rose);border:1px solid var(--border)}
+    .firm-link{font-size:0.8rem;font-weight:600;color:var(--rose);text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem}
+    .firm-link:hover{text-decoration:underline}
+
+    /* CTA */
+    .cta-sec{padding:3.5rem 1.5rem;background:var(--d2);position:relative;z-index:1;overflow:hidden}
+    .cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:300px;background:radial-gradient(ellipse,rgba(201,160,122,0.1) 0%,transparent 65%);pointer-events:none}
+    .cta-box{
+      max-width:680px;margin:0 auto;text-align:center;
+      background:linear-gradient(145deg,rgba(201,160,122,0.1),rgba(201,160,122,0.03));
+      border:1px solid var(--border2);border-radius:20px;padding:2.5rem 2rem;
+      position:relative;overflow:hidden;
+    }
+    .cta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--rose),transparent)}
+    .cta-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--text);margin-bottom:0.6rem}
+    .cta-sub{font-size:0.88rem;color:var(--muted);margin-bottom:1.75rem;line-height:1.65;max-width:460px;margin-left:auto;margin-right:auto}
+    .cta-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:0.72rem 1.5rem;font-size:0.83rem;font-weight:600;letter-spacing:0.04em;border-radius:9px;text-decoration:none;transition:all 0.2s}
+    .btn-p{background:linear-gradient(135deg,var(--rose),var(--rose-b));color:#1A1208;box-shadow:0 4px 16px rgba(201,160,122,0.25)}
+    .btn-p:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(201,160,122,0.35);text-decoration:none}
+    .btn-g{border:1px solid var(--border);color:var(--muted)}
+    .btn-g:hover{border-color:var(--rose);color:var(--rose);text-decoration:none}
+
+    /* FOOTER */
+    footer{background:var(--d2);border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;font-size:0.74rem;color:var(--muted);line-height:1.9;position:relative;z-index:1}
+    footer a{color:var(--rose);text-decoration:none}
+    .fb{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text);display:block;margin-bottom:0.5rem;font-weight:700;letter-spacing:0.08em}
+    .fb span{color:var(--rose)}
+    .fdis{font-size:0.69rem;color:var(--mid);max-width:540px;margin:0.75rem auto 0;line-height:1.65}
+
+    /* FADE */
+    .fade{opacity:0;transform:translateY(14px);transition:opacity 0.55s ease,transform 0.55s ease}
+    .fade.in{opacity:1;transform:none}
+
+    /* GLOW SEPARATOR */
+    .sep{
+      height:80px;position:relative;z-index:1;
+      display:flex;align-items:center;justify-content:center;
+      overflow:hidden;
+    }
+    .sep::before{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,160,122,0.3),transparent)}
+    .sep-dot{
+      width:8px;height:8px;border-radius:50%;
+      background:var(--rose);
+      box-shadow:0 0 12px rgba(201,160,122,0.6),0 0 24px rgba(201,160,122,0.3);
+      position:relative;z-index:1;
+      animation:pulse-dot 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse-dot{
+      0%,100%{box-shadow:0 0 12px rgba(201,160,122,0.6),0 0 24px rgba(201,160,122,0.3)}
+      50%{box-shadow:0 0 18px rgba(201,160,122,0.9),0 0 36px rgba(201,160,122,0.5)}
+    }
+  </style>
+</head>
+<body>
+<div class="page-ambient"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">TRADERS<span>NAV</span></a>
+  <a href="/blog.html" class="nav-back">← All Reviews</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="cat-pill fade">Prop Firm Guide</div>
+    <h1 class="fade">How to Choose the<br>Right Prop Firm<br><em>as a Beginner</em></h1>
+    <p class="hero-tagline fade">Most beginners buy a challenge before they know what they're buying. Here's how to get it right.</p>
+    <div class="hero-meta fade">
+      <span>📅 May 2026</span>
+      <span>⏱ 8 min read</span>
+      <span>✍️ Active Prop Trader</span>
+    </div>
+  </div>
+</div>
+
+<!-- TOC -->
+<div class="glow-div"></div>
+<div class="toc-wrap">
+  <div class="toc-inner fade">
+    <div class="toc-label">What's in this guide</div>
+    <div class="toc-grid">
+      <a href="#mistake" class="toc-item"><span class="toc-num">01</span><span class="toc-text">The Mistake Most Beginners Make</span><span class="toc-arrow">→</span></a>
+      <a href="#reputation" class="toc-item"><span class="toc-num">02</span><span class="toc-text">Why Reputation Matters More Than Price</span><span class="toc-arrow">→</span></a>
+      <a href="#account-size" class="toc-item"><span class="toc-num">03</span><span class="toc-text">Start Small — Don't Jump to $100K</span><span class="toc-arrow">→</span></a>
+      <a href="#strategy" class="toc-item"><span class="toc-num">04</span><span class="toc-text">Match the Firm to Your Strategy</span><span class="toc-arrow">→</span></a>
+      <a href="#hidden" class="toc-item"><span class="toc-num">05</span><span class="toc-text">Hidden Rules That Catch Beginners Off Guard</span><span class="toc-arrow">→</span></a>
+      <a href="#checklist" class="toc-item"><span class="toc-num">06</span><span class="toc-text">The 6-Point Checklist</span><span class="toc-arrow">→</span></a>
+      <a href="#firms" class="toc-item"><span class="toc-num">07</span><span class="toc-text">Firms Worth Looking At</span><span class="toc-arrow">→</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- S1: MISTAKES -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec" id="mistake">
+  <div class="sec-inner">
+    <div class="eyebrow fade">The Core Problem</div>
+    <h2 class="fade">The Mistake Most Beginners Make</h2>
+    <p class="fade">There are two mistakes that come up constantly with beginners entering prop trading. The first is choosing a firm purely based on price — going with whoever is running the cheapest promotion that week. The second is buying a $100K or $200K challenge on day one because a bigger account sounds like more opportunity.</p>
+    <p class="fade">Both mistakes cost money. The cheap firm with no reputation might deny payouts for minor rule violations or shut down without warning. The oversized account creates psychological pressure that kills execution.</p>
+
+    <div class="mistake-grid fade">
+      <div class="mistake-card">
+        <div class="mistake-num">Mistake 01</div>
+        <div class="mistake-title">Chasing the cheapest challenge fee</div>
+        <div class="mistake-desc">Low price ≠ good firm. Many cheap firms have high denial rates, vague payout rules, or disappear after a few months.</div>
+      </div>
+      <div class="mistake-card">
+        <div class="mistake-num">Mistake 02</div>
+        <div class="mistake-title">Jumping to $100K on day one</div>
+        <div class="mistake-desc">Psychological pressure changes how you trade. You'll execute differently when the numbers are bigger than anything you've managed before.</div>
+      </div>
+    </div>
+
+    <div class="callout c-warn fade">
+      <div class="c-label">⚠ Common Mistake</div>
+      <p>Buying a large challenge before proving your strategy on a smaller account is one of the fastest ways to lose your challenge fee. The market doesn't care about your account size — but your psychology does.</p>
+    </div>
+  </div>
+</div>
+
+<!-- S2: REPUTATION -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec sec-alt" id="reputation">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Evaluating Firms</div>
+    <h2 class="fade">Why Reputation Matters More Than Price</h2>
+    <p class="fade">Pricing in the prop firm space has become very competitive. You'll find firms offering $10K challenges for under $50. But price is the wrong thing to optimise for — <strong>what actually matters is whether you'll get paid when you hit your target.</strong></p>
+
+    <div class="pquote fade">
+      <p>A firm with a strong reputation and low payout denial rates is worth more than a slightly cheaper challenge from a firm nobody has heard of.</p>
+    </div>
+
+    <p class="fade">Three specific things to check before buying:</p>
+
+    <div class="steps fade">
+      <div class="step">
+        <div class="snum">01</div>
+        <div>
+          <div class="stitle">Payout track record</div>
+          <div class="sdesc">Search the firm name on Reddit, PropFirmMatch, and Trustpilot. Look specifically for payout denial patterns — not just general complaints, but traders who hit their target and didn't get paid.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="snum">02</div>
+        <div>
+          <div class="stitle">Founder and community engagement</div>
+          <div class="sdesc">Firms where the founder is publicly visible and active in the community are meaningfully lower risk. It's much harder to pull a rug when you have a public identity attached to the business.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="snum">03</div>
+        <div>
+          <div class="stitle">Customer support quality</div>
+          <div class="sdesc">Test it before you buy. Send a question about their drawdown rules. How fast and clearly they respond tells you how they'll handle a real dispute later.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout c-tip fade">
+      <div class="c-label">✓ Practical Tip</div>
+      <p>Test support before purchasing. If the response is slow, vague, or unhelpful — that's your answer before you've spent a dollar.</p>
+    </div>
+  </div>
+</div>
+
+<!-- S3: ACCOUNT SIZE -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec" id="account-size">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Account Sizing</div>
+    <h2 class="fade">Start Small — Don't Jump to $100K</h2>
+    <p class="fade">The logic is simple: <strong>if your strategy works, it works at any account size.</strong> Prove it small, then scale. A trader who passes a $5K challenge and builds up is creating something sustainable. One who buys a $100K challenge on day one is usually gambling with the fee.</p>
+
+    <!-- Scaling visual -->
+    <div class="scale-row fade">
+      <div class="scale-bar-wrap">
+        <div class="scale-label-top dim">$5K</div>
+        <div class="scale-bar" style="height:60px"></div>
+        <div class="scale-label-bot">Prove<br>strategy</div>
+      </div>
+      <div class="scale-arrow">→</div>
+      <div class="scale-bar-wrap">
+        <div class="scale-label-top dim">$10K</div>
+        <div class="scale-bar" style="height:90px"></div>
+        <div class="scale-label-bot">Build<br>track record</div>
+      </div>
+      <div class="scale-arrow">→</div>
+      <div class="scale-bar-wrap">
+        <div class="scale-label-top">$25K</div>
+        <div class="scale-bar" style="height:130px"></div>
+        <div class="scale-label-bot">Consistency<br>proven</div>
+      </div>
+      <div class="scale-arrow">→</div>
+      <div class="scale-bar-wrap">
+        <div class="scale-label-top" style="color:var(--rose-b)">$100K+</div>
+        <div class="scale-bar highlight" style="height:180px"></div>
+        <div class="scale-label-bot" style="color:var(--rose)">Now you<br>belong here ★</div>
+      </div>
+    </div>
+
+    <ul class="checklist fade">
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#3ECF7A" stroke-opacity="0.5"/><path d="M5 8l2 2 4-4" stroke="#3ECF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Lower challenge fee — less at risk while learning the firm's specific rules</li>
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#3ECF7A" stroke-opacity="0.5"/><path d="M5 8l2 2 4-4" stroke="#3ECF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Less psychological pressure — you trade closer to how you trade on demo</li>
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#3ECF7A" stroke-opacity="0.5"/><path d="M5 8l2 2 4-4" stroke="#3ECF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Proof of concept — a passed $5K account proves the strategy under real prop conditions</li>
+      <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#3ECF7A" stroke-opacity="0.5"/><path d="M5 8l2 2 4-4" stroke="#3ECF7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Most reputable firms have scaling plans — grow the same account on performance</li>
+    </ul>
+  </div>
+</div>
+
+<!-- S4: STRATEGY FIT -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec sec-alt" id="strategy">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Strategy Compatibility</div>
+    <h2 class="fade">Match the Firm to Your Strategy</h2>
+    <p class="fade">The right prop firm for you depends entirely on <strong>how you actually trade</strong> — not which firm has the best marketing. There is no universally best firm. There is only the right firm for your specific approach.</p>
+
+    <div class="strategy-grid fade">
+      <div class="strategy-card">
+        <div class="strategy-head">
+          <div class="strategy-icon" style="background:rgba(224,85,85,0.1)">⚡</div>
+          <div class="strategy-name">Aggressive / High Risk Style</div>
+        </div>
+        <div class="strategy-body">
+          <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">You size up aggressively and need maximum flexibility. Any lot restriction will feel like trading with one hand tied behind your back.</p>
+          <div class="strategy-tags">
+            <span class="stag stag-need">✓ No max lot size limit</span>
+            <span class="stag stag-need">✓ Higher daily loss limit</span>
+            <span class="stag stag-need">✓ Static drawdown</span>
+            <span class="stag stag-avoid">✕ Avoid: consistency rules</span>
+          </div>
+        </div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-head">
+          <div class="strategy-icon" style="background:rgba(106,173,223,0.1)">📈</div>
+          <div class="strategy-name">High R:R / Swing Trader</div>
+        </div>
+        <div class="strategy-body">
+          <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">You might lose 6-7 in a row before one big winner covers everything. You need room to survive the drawdown before your edge plays out.</p>
+          <div class="strategy-tags">
+            <span class="stag stag-need">✓ Higher daily drawdown</span>
+            <span class="stag stag-need">✓ Weekend holding allowed</span>
+            <span class="stag stag-need">✓ Static drawdown</span>
+            <span class="stag stag-avoid">✕ Avoid: tight daily limits</span>
+          </div>
+        </div>
+      </div>
+      <div class="strategy-card">
+        <div class="strategy-head">
+          <div class="strategy-icon" style="background:rgba(62,207,122,0.1)">📰</div>
+          <div class="strategy-name">News / Event Trader</div>
+        </div>
+        <div class="strategy-body">
+          <p style="font-size:0.84rem;color:var(--muted);margin-bottom:0.75rem">Many firms prohibit trading during high-impact news. If NFP, CPI, or FOMC reactions are your edge, verify explicitly — definitions of "news trading" vary by firm.</p>
+          <div class="strategy-tags">
+            <span class="stag stag-need">✓ News trading allowed</span>
+            <span class="stag stag-need">✓ Fast execution</span>
+            <span class="stag stag-need">✓ Clear rules definition</span>
+            <span class="stag stag-avoid">✕ Avoid: vague news clauses</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S5: HIDDEN RULES -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec" id="hidden">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Due Diligence</div>
+    <h2 class="fade">Hidden Rules That Catch Beginners Off Guard</h2>
+    <p class="fade">Prop firms make most of their revenue from challenge fees — so it's in their interest to have rules that are easy to accidentally break. Read the actual rulebook, not just the marketing page.</p>
+
+    <div class="rule-grid fade">
+      <div class="rule-card">
+        <div class="rule-head"><div class="rule-dot dot-red"></div><div class="rule-title">Trailing Drawdown</div></div>
+        <div class="rule-desc">Follows your equity peak upward — a good day reduces your buffer for tomorrow. Much harder to manage than static.</div>
+        <span class="rule-flag flag-red">High Risk Rule</span>
+      </div>
+      <div class="rule-card">
+        <div class="rule-head"><div class="rule-dot dot-red"></div><div class="rule-title">Consistency Rule</div></div>
+        <div class="rule-desc">One exceptional day can't account for more than 30–50% of total profit. One great trade can disqualify a passing account.</div>
+        <span class="rule-flag flag-red">Most Overlooked</span>
+      </div>
+      <div class="rule-card">
+        <div class="rule-head"><div class="rule-dot dot-red"></div><div class="rule-title">Weekend Holding Ban</div></div>
+        <div class="rule-desc">Many firms prohibit holding trades over the weekend. Kills swing strategies that hold multi-day positions.</div>
+        <span class="rule-flag flag-red">Strategy Killer</span>
+      </div>
+      <div class="rule-card">
+        <div class="rule-head"><div class="rule-dot dot-green"></div><div class="rule-title">Static Drawdown</div></div>
+        <div class="rule-desc">Fixed from your starting balance — never tightens. Far more forgiving for volatile strategies and high R:R approaches.</div>
+        <span class="rule-flag flag-green">Trader-Friendly</span>
+      </div>
+      <div class="rule-card">
+        <div class="rule-head"><div class="rule-dot dot-red"></div><div class="rule-title">Max Lot Size Limit</div></div>
+        <div class="rule-desc">Caps position size relative to account balance. Restrictive for traders who scale into positions at key levels.</div>
+        <span class="rule-flag flag-red">Check Carefully</span>
+      </div>
+      <div class="rule-card">
+        <div class="rule-head"><div class="rule-dot dot-red"></div><div class="rule-title">Minimum Trading Days</div></div>
+        <div class="rule-desc">You can't pass in 2 days even if you hit the target. Minimums above 5 days frustrate active traders in a strong run.</div>
+        <span class="rule-flag flag-red">Easy to Miss</span>
+      </div>
+    </div>
+
+    <div class="callout c-warn fade">
+      <div class="c-label">⚠ Most Overlooked Rule</div>
+      <p>The consistency rule catches more beginners than anything else. One exceptional day — even a legitimate one — can disqualify an otherwise passing account at firms that enforce it strictly.</p>
+    </div>
+  </div>
+</div>
+
+<!-- S6: CHECKLIST -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec sec-alt" id="checklist">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Before You Buy</div>
+    <h2 class="fade">The 6-Point Checklist</h2>
+    <p class="fade">Run through this before buying any challenge. If a firm fails more than two — keep looking.</p>
+
+    <ul class="checklist fade">
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="16" height="16" rx="5" fill="rgba(201,160,122,0.08)" stroke="rgba(201,160,122,0.3)" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="#C9A07A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><strong>Reputation checked</strong> — searched Reddit, Trustpilot, PropFirmMatch for payout denial patterns specifically</span>
+      </li>
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="16" height="16" rx="5" fill="rgba(201,160,122,0.08)" stroke="rgba(201,160,122,0.3)" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="#C9A07A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><strong>Support tested</strong> — sent a message before purchasing and received a clear, timely response</span>
+      </li>
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="16" height="16" rx="5" fill="rgba(201,160,122,0.08)" stroke="rgba(201,160,122,0.3)" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="#C9A07A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><strong>Full rules read</strong> — the actual terms document, including consistency rule and drawdown type</span>
+      </li>
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="16" height="16" rx="5" fill="rgba(201,160,122,0.08)" stroke="rgba(201,160,122,0.3)" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="#C9A07A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><strong>Strategy compatibility confirmed</strong> — drawdown type, lot limits, news rules, weekend rules all suit your approach</span>
+      </li>
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="16" height="16" rx="5" fill="rgba(201,160,122,0.08)" stroke="rgba(201,160,122,0.3)" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="#C9A07A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><strong>Starting with a smaller account</strong> — $5K or $10K to prove the strategy before scaling capital</span>
+      </li>
+      <li>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="16" height="16" rx="5" fill="rgba(201,160,122,0.08)" stroke="rgba(201,160,122,0.3)" stroke-width="1.5"/><path d="M5.5 9l2.5 2.5 4.5-4.5" stroke="#C9A07A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><strong>Scaling plan confirmed</strong> — the firm has a clear, structured path to grow your account based on performance</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- S7: FIRMS -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec" id="firms">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Verified Picks</div>
+    <h2 class="fade">Firms Worth Looking At</h2>
+    <p class="fade">These aren't paid placements. They're firms that hold up well against the checklist above — researched properly with honest pros and cons.</p>
+
+    <div class="firm-cards fade">
+      <div class="firm-card">
+        <div class="firm-head">
+          <div class="firm-name">Maven Trading</div>
+          <span class="firm-badge badge-g">Good for Beginners</span>
+        </div>
+        <div class="firm-body">
+          <p>One of the best value propositions in the space right now. Maven's pricing is competitive without being suspiciously cheap, and what sets them apart is genuine founder engagement — the team is publicly visible and active in the community. Payout denial rates are low, customer support is responsive, and the challenge structure is clean. A strong starting point for most beginners, especially those starting from a $5K account.</p>
+          <div class="firm-tags">
+            <span class="ftag">Low denial rate</span>
+            <span class="ftag">Active founder</span>
+            <span class="ftag">Competitive pricing</span>
+            <span class="ftag">Responsive support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="firm-card">
+        <div class="firm-head">
+          <div class="firm-name">FTMO</div>
+          <span class="firm-badge badge-b">Most Established</span>
+        </div>
+        <div class="firm-body">
+          <p>The most established name in prop trading. FTMO's longevity is itself a trust signal — they've been paying out traders since 2015 with a well-documented track record. Rules are strict and clearly stated, which is actually a positive. The consistency rule applies, so if your strategy relies on occasional large winning days, read that section carefully before purchasing.</p>
+          <div class="firm-tags">
+            <span class="ftag">Est. 2015</span>
+            <span class="ftag">Clear rules</span>
+            <span class="ftag">Consistency rule applies</span>
+            <span class="ftag">Best for disciplined traders</span>
+          </div>
+          <a href="/blog-ftmo-review.html" class="firm-link">Read our full FTMO review →</a>
+        </div>
+      </div>
+
+      <div class="firm-card">
+        <div class="firm-head">
+          <div class="firm-name">FundingPips</div>
+          <span class="firm-badge badge-r">Flexible Rules</span>
+        </div>
+        <div class="firm-body">
+          <p>A newer firm that has built a strong reputation quickly. FundingPips is particularly well-suited to traders who want more flexibility — their rules are less restrictive than FTMO's in several areas and they've been consistent on payouts. Worth considering if FTMO's consistency rule would constrain your specific strategy.</p>
+          <div class="firm-tags">
+            <span class="ftag">Flexible rules</span>
+            <span class="ftag">Growing reputation</span>
+            <span class="ftag">Good payout record</span>
+          </div>
+          <a href="/blog-fundingpips-review.html" class="firm-link">Read our full FundingPips review →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout c-key fade">
+      <div class="c-label">Our Approach</div>
+      <p>Rankings reflect honest assessment — not who pays us the most. Every affiliate relationship is disclosed. <a href="/disclaimer.html">See our disclaimer</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="cta-sec">
+  <div class="cta-glow"></div>
+  <div class="cta-box fade">
+    <div class="cta-title">Ready to compare specific firms?</div>
+    <div class="cta-sub">Read our detailed reviews of the two most popular prop firms for beginners — with honest pros, cons, and who each one is actually right for.</div>
+    <div class="cta-btns">
+      <a href="/blog-ftmo-review.html" class="btn btn-p">FTMO Review →</a>
+      <a href="/blog-fundingpips-review.html" class="btn btn-g">FundingPips Review →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="fb">TRADERS<span>NAV</span></span>
+  <p><a href="/">Home</a> &nbsp;·&nbsp; <a href="/blog.html">Reviews</a> &nbsp;·&nbsp; <a href="/about.html">About</a> &nbsp;·&nbsp; <a href="/disclaimer.html">Disclaimer</a></p>
+  <div class="fdis">This article contains affiliate links. If you sign up through them we may earn a commission at no extra cost to you. This never influences our editorial positions. Nothing here constitutes financial advice. Trading involves significant risk of loss.</div>
+  <p style="margin-top:0.5rem;font-size:0.68rem;color:var(--mid)">© 2026 TradersNav. All rights reserved.</p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}
+  }), {threshold:0.05, rootMargin:'0px 0px -20px 0px'});
+  document.querySelectorAll('.fade').forEach((el,i) => {
+    el.style.transitionDelay = Math.min(i*0.035, 0.25)+'s';
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
