@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Pass a Prop Firm Challenge in 2026 — The Real Reasons Traders Fail | TradersNav</title>
+  <meta name="description" content="Most traders fail prop firm challenges for the same reasons — overtrading, poor psychology, risking too much per trade, and ignoring the news calendar. Here's how to avoid them, for forex and futures."/>
+  <link rel="canonical" href="https://tradersnav.co/blog-how-to-pass-prop-firm-challenge.html"/>
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8YJ6YRH1E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N8YJ6YRH1E');</script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --rose:#C9A07A;--rose-b:#E8B87A;--rose-l:#F0D0A0;
+      --dark:#13100C;--d2:#181410;--d3:#1E1A13;--d4:#242018;
+      --text:#F0EAE0;--text2:#D4C8B8;--muted:#9A8A78;--mid:#6B5F50;
+      --border:rgba(201,160,122,0.15);--border2:rgba(201,160,122,0.25);
+      --green:#3ECF7A;--gdim:rgba(62,207,122,0.1);
+      --red:#E05555;--rdim:rgba(224,85,85,0.1);
+      --blue:#6AADDF;--bdim:rgba(106,173,223,0.1);
+      --yellow:#F5C842;--ydim:rgba(245,200,66,0.1);
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+    .page-ambient{position:fixed;inset:0;pointer-events:none;z-index:0;
+      background:radial-gradient(ellipse 55% 40% at 80% 5%,rgba(224,85,85,0.05) 0%,transparent 55%),
+      radial-gradient(ellipse 55% 40% at 20% 90%,rgba(62,207,122,0.06) 0%,transparent 55%)}
+
+    nav{position:sticky;top:0;z-index:100;background:rgba(19,16,12,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;letter-spacing:0.08em;color:var(--text);text-decoration:none}
+    .nav-logo span{color:var(--rose)}
+    .nav-back{padding:0.4rem 0.9rem;border:1px solid var(--border);border-radius:50px;color:var(--muted);font-size:0.76rem;text-decoration:none;transition:all 0.2s}
+    .nav-back:hover{color:var(--rose);border-color:var(--border2)}
+
+    /* HERO */
+    .hero{position:relative;overflow:hidden;padding:4.5rem 1.5rem 3rem;z-index:1;
+      background:radial-gradient(ellipse 80% 55% at 50% -5%,rgba(201,160,122,0.1) 0%,transparent 65%)}
+    .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,160,122,0.3),transparent)}
+    .hero-inner{max-width:700px;margin:0 auto;position:relative;z-index:1;text-align:center}
+    .cat-pill{display:inline-flex;align-items:center;gap:0.45rem;font-size:0.63rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose);background:rgba(201,160,122,0.08);border:1px solid var(--border2);padding:0.3rem 0.9rem;border-radius:50px;margin-bottom:1.75rem}
+    .cat-pill::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--rose);animation:pdot 2s ease-in-out infinite}
+    @keyframes pdot{0%,100%{opacity:1}50%{opacity:0.35}}
+    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,6.5vw,3.3rem);font-weight:700;line-height:1.12;margin-bottom:1.25rem;background:linear-gradient(160deg,#FFF 0%,var(--rose-l) 55%,var(--rose) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-tagline{font-size:1rem;color:var(--muted);line-height:1.7;max-width:520px;margin:0 auto 2rem}
+    .hero-meta{display:inline-flex;gap:0;flex-wrap:wrap;justify-content:center;font-size:0.72rem;color:var(--muted);background:rgba(201,160,122,0.05);border:1px solid var(--border);border-radius:50px;overflow:hidden}
+    .hero-meta span{padding:0.5rem 1rem;border-right:1px solid var(--border)}
+    .hero-meta span:last-child{border-right:none}
+
+    /* SECTIONS */
+    .sep{height:55px;position:relative;z-index:1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .sep::before{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,160,122,0.2),transparent)}
+    .sep-dot{width:6px;height:6px;border-radius:50%;background:var(--rose);box-shadow:0 0 10px rgba(201,160,122,0.5),0 0 20px rgba(201,160,122,0.25);position:relative;z-index:1;animation:pulse-dot 2.5s ease-in-out infinite}
+    @keyframes pulse-dot{0%,100%{box-shadow:0 0 10px rgba(201,160,122,0.5),0 0 20px rgba(201,160,122,0.25)}50%{box-shadow:0 0 16px rgba(201,160,122,0.8),0 0 32px rgba(201,160,122,0.4)}}
+
+    .sec{padding:2.5rem 1.5rem;position:relative;z-index:1}
+    .sec-alt{background:var(--d2)}
+    .sec-inner{max-width:700px;margin:0 auto}
+    .eyebrow{font-size:0.6rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem}
+    .eyebrow::before{content:'';width:18px;height:1px;background:var(--rose)}
+    h2{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;line-height:1.2;scroll-margin-top:70px}
+    p{font-size:0.92rem;color:var(--text2);line-height:1.85;margin-bottom:1rem}
+    p:last-child{margin-bottom:0}
+    strong{color:var(--rose-l);font-weight:600}
+    a{color:var(--rose);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* RANK NUMBER CARD */
+    .reason-card{display:flex;gap:1.1rem;background:var(--d3);border:1px solid var(--border);border-radius:14px;padding:1.25rem;margin:1.25rem 0;position:relative;overflow:hidden}
+    .reason-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px}
+    .rc-1::before{background:linear-gradient(90deg,transparent,var(--red),transparent)}
+    .rc-2::before{background:linear-gradient(90deg,transparent,var(--yellow),transparent)}
+    .rc-3::before{background:linear-gradient(90deg,transparent,var(--blue),transparent)}
+    .rc-4::before{background:linear-gradient(90deg,transparent,var(--rose),transparent)}
+    .reason-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;flex-shrink:0;line-height:1;width:50px;text-align:center}
+    .reason-icon{width:50px;height:50px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(245,200,66,0.08);border:1px solid rgba(245,200,66,0.2)}
+    .rc-1 .reason-num{color:var(--red)}
+    .rc-2 .reason-num{color:var(--yellow)}
+    .rc-3 .reason-num{color:var(--blue)}
+    .rc-4 .reason-num{color:var(--rose)}
+    .reason-content{flex:1}
+    .reason-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:0.4rem}
+    .reason-desc{font-size:0.86rem;color:var(--muted);line-height:1.7}
+
+    /* ILLUSTRATION */
+    .illus{background:var(--d3);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:1.5rem 0}
+
+    /* CALLOUTS */
+    .callout{border-radius:12px;padding:1rem 1.2rem;margin:1.25rem 0;position:relative;overflow:hidden}
+    .callout::before{content:'';position:absolute;top:0;left:0;right:0;height:1px}
+    .c-key{background:rgba(201,160,122,0.07);border:1px solid var(--border2);border-left:3px solid var(--rose)}
+    .c-key::before{background:linear-gradient(90deg,var(--rose),transparent)}
+    .c-warn{background:var(--rdim);border:1px solid rgba(224,85,85,0.25);border-left:3px solid var(--red)}
+    .c-warn::before{background:linear-gradient(90deg,var(--red),transparent)}
+    .c-tip{background:var(--gdim);border:1px solid rgba(62,207,122,0.25);border-left:3px solid var(--green)}
+    .c-tip::before{background:linear-gradient(90deg,var(--green),transparent)}
+    .c-label{font-size:0.59rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.4rem}
+    .c-key .c-label{color:var(--rose)}
+    .c-warn .c-label{color:var(--red)}
+    .c-tip .c-label{color:var(--green)}
+    .callout p{font-size:0.88rem;line-height:1.65;margin:0;color:var(--text2)}
+
+    /* CHECKLIST */
+    .checklist{background:var(--d3);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin:1.5rem 0}
+    .check-item{display:flex;align-items:flex-start;gap:0.75rem;padding:0.6rem 0;border-bottom:1px solid rgba(201,160,122,0.07)}
+    .check-item:last-child{border-bottom:none}
+    .check-box{width:20px;height:20px;border-radius:5px;border:1.5px solid var(--border2);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--green);margin-top:0.1rem}
+    .check-text{font-size:0.86rem;color:var(--text2);line-height:1.6}
+    .check-text strong{color:var(--rose-l)}
+
+    /* CTA */
+    .cta-sec{padding:3rem 1.5rem;background:var(--d2);position:relative;z-index:1;overflow:hidden}
+    .cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:400px;height:250px;background:radial-gradient(ellipse,rgba(201,160,122,0.1) 0%,transparent 65%);pointer-events:none}
+    .cta-box{max-width:620px;margin:0 auto;text-align:center;background:linear-gradient(145deg,rgba(201,160,122,0.1),rgba(201,160,122,0.03));border:1px solid var(--border2);border-radius:18px;padding:2.25rem;position:relative;overflow:hidden}
+    .cta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--rose),transparent)}
+    .cta-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--text);margin-bottom:0.5rem}
+    .cta-sub{font-size:0.86rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.65}
+    .cta-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:0.7rem 1.4rem;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;border-radius:9px;text-decoration:none;transition:all 0.2s}
+    .btn-p{background:linear-gradient(135deg,var(--rose),var(--rose-b));color:#1A1208;box-shadow:0 4px 16px rgba(201,160,122,0.25)}
+    .btn-p:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(201,160,122,0.35);text-decoration:none}
+    .btn-g{border:1px solid var(--border);color:var(--muted)}
+    .btn-g:hover{border-color:var(--rose);color:var(--rose);text-decoration:none}
+
+    footer{background:var(--d2);border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;font-size:0.74rem;color:var(--muted);line-height:1.9;position:relative;z-index:1}
+    footer a{color:var(--rose);text-decoration:none}
+    .fb{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text);display:block;margin-bottom:0.5rem;font-weight:700;letter-spacing:0.08em}
+    .fb span{color:var(--rose)}
+    .fdis{font-size:0.69rem;color:var(--mid);max-width:540px;margin:0.75rem auto 0;line-height:1.65}
+
+    .fade{opacity:0;transform:translateY(14px);transition:opacity 0.55s ease,transform 0.55s ease}
+    .fade.in{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+<div class="page-ambient"></div>
+
+<nav>
+  <a href="/" class="nav-logo">TRADERS<span>NAV</span></a>
+  <a href="/blog.html" class="nav-back">← All Guides</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="cat-pill fade">Prop Firm Guides</div>
+    <h1 class="fade">How to Pass a Prop<br><em>Firm Challenge</em></h1>
+    <p class="hero-tagline fade">Most traders don't fail challenges because of strategy. They fail because of overtrading, poor psychology, oversized risk, and ignoring the news calendar. Here's how to actually pass — for forex and futures.</p>
+    <div class="hero-meta fade">
+      <span>📅 June 2026</span>
+      <span>⏱ 7 min read</span>
+      <span>✍️ TradersNav</span>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec">
+  <div class="sec-inner">
+    <div class="eyebrow fade">The Real Problem</div>
+    <h2 class="fade">It's Not Your Strategy</h2>
+    <p class="fade">Most traders who fail a prop firm challenge already have a strategy that works. They've backtested it, they've seen it produce profits on demo. The challenge fails for a completely different reason — execution under pressure.</p>
+    <p class="fade">A funded account with real rules and a daily loss limit changes how you trade, even if you don't notice it happening. The same setup that you'd take calmly on demo suddenly feels urgent. That shift is where challenges are won or lost.</p>
+
+    <!-- Why challenges fail illustration -->
+    <div class="illus fade">
+      <svg viewBox="0 0 660 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#1E1A13">
+        <text x="330" y="20" font-family="DM Sans" font-size="9" fill="#6B5F50" text-anchor="middle" font-weight="700" letter-spacing="1.5">WHAT ACTUALLY FAILS A CHALLENGE</text>
+        <rect x="20" y="30" width="145" height="55" rx="8" fill="rgba(224,85,85,0.08)" stroke="rgba(224,85,85,0.25)" stroke-width="1.5"/>
+        <text x="92" y="55" font-family="DM Sans" font-size="9.5" fill="#E05555" text-anchor="middle" font-weight="700">Overtrading</text>
+        <text x="92" y="72" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">Revenge trades</text>
+        <rect x="178" y="30" width="145" height="55" rx="8" fill="rgba(245,200,66,0.08)" stroke="rgba(245,200,66,0.25)" stroke-width="1.5"/>
+        <text x="250" y="55" font-family="DM Sans" font-size="9.5" fill="#F5C842" text-anchor="middle" font-weight="700">Poor Psychology</text>
+        <text x="250" y="72" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">Fear &amp; greed cycles</text>
+        <rect x="336" y="30" width="145" height="55" rx="8" fill="rgba(106,173,223,0.08)" stroke="rgba(106,173,223,0.25)" stroke-width="1.5"/>
+        <text x="408" y="55" font-family="DM Sans" font-size="9.5" fill="#6AADDF" text-anchor="middle" font-weight="700">Oversized Risk</text>
+        <text x="408" y="72" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">Too much per trade</text>
+        <rect x="494" y="30" width="146" height="55" rx="8" fill="rgba(201,160,122,0.08)" stroke="rgba(201,160,122,0.25)" stroke-width="1.5"/>
+        <text x="567" y="55" font-family="DM Sans" font-size="9.5" fill="#C9A07A" text-anchor="middle" font-weight="700">Ignoring News</text>
+        <text x="567" y="72" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">Red folder events</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- REASON 1: OVERTRADING -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Reason #1</div>
+    <h2 class="fade">Overtrading After a Loss</h2>
+    <p class="fade">This is the single biggest account-killer. One loss happens — a normal, expected part of any strategy — and instead of moving on, the trader immediately looks for the next setup to "make it back." That next trade is rushed, oversized, and usually loses too. Now there are two losses, and the cycle accelerates.</p>
+
+    <div class="illus fade">
+      <svg viewBox="0 0 660 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#181410">
+        <text x="330" y="18" font-family="DM Sans" font-size="9" fill="#6B5F50" text-anchor="middle" font-weight="700" letter-spacing="1.5">THE OVERTRADING SPIRAL</text>
+        <circle cx="80" cy="60" r="32" fill="rgba(106,173,223,0.08)" stroke="rgba(106,173,223,0.25)" stroke-width="1.5"/>
+        <text x="80" y="58" font-family="DM Sans" font-size="9" fill="#6AADDF" text-anchor="middle" font-weight="700">Normal</text>
+        <text x="80" y="70" font-family="DM Sans" font-size="8" fill="#6AADDF" text-anchor="middle">Loss</text>
+        <text x="125" y="63" font-family="DM Sans" font-size="14" fill="#6B5F50" text-anchor="middle">→</text>
+        <circle cx="200" cy="60" r="36" fill="rgba(245,200,66,0.08)" stroke="rgba(245,200,66,0.25)" stroke-width="1.5"/>
+        <text x="200" y="58" font-family="DM Sans" font-size="9" fill="#F5C842" text-anchor="middle" font-weight="700">"Make it</text>
+        <text x="200" y="70" font-family="DM Sans" font-size="9" fill="#F5C842" text-anchor="middle" font-weight="700">back" trade</text>
+        <text x="252" y="63" font-family="DM Sans" font-size="14" fill="#6B5F50" text-anchor="middle">→</text>
+        <circle cx="330" cy="60" r="40" fill="rgba(224,85,85,0.1)" stroke="rgba(224,85,85,0.3)" stroke-width="1.5"/>
+        <text x="330" y="56" font-family="DM Sans" font-size="9" fill="#E05555" text-anchor="middle" font-weight="700">Oversized,</text>
+        <text x="330" y="68" font-family="DM Sans" font-size="9" fill="#E05555" text-anchor="middle" font-weight="700">rushed entry</text>
+        <text x="386" y="63" font-family="DM Sans" font-size="14" fill="#6B5F50" text-anchor="middle">→</text>
+        <circle cx="460" cy="60" r="44" fill="rgba(224,85,85,0.15)" stroke="rgba(224,85,85,0.4)" stroke-width="2"/>
+        <text x="460" y="56" font-family="DM Sans" font-size="9" fill="#E05555" text-anchor="middle" font-weight="700">Second loss</text>
+        <text x="460" y="68" font-family="DM Sans" font-size="8" fill="#E05555" text-anchor="middle">larger than first</text>
+        <text x="520" y="63" font-family="DM Sans" font-size="14" fill="#6B5F50" text-anchor="middle">→</text>
+        <rect x="555" y="35" width="85" height="50" rx="8" fill="rgba(224,85,85,0.2)" stroke="rgba(224,85,85,0.5)" stroke-width="2"/>
+        <text x="597" y="55" font-family="DM Sans" font-size="9" fill="#FF8888" text-anchor="middle" font-weight="700">Daily loss</text>
+        <text x="597" y="68" font-family="DM Sans" font-size="9" fill="#FF8888" text-anchor="middle" font-weight="700">limit hit</text>
+      </svg>
+    </div>
+
+    <div class="callout c-warn fade">
+      <div class="c-label">⚠ The Hard Rule</div>
+      <p>After any loss, step away from the screen for at least 15–30 minutes. No exceptions. The urge to immediately recover the loss is exactly the impulse that turns one bad trade into a blown challenge. The market will still be there when you come back.</p>
+    </div>
+  </div>
+</div>
+
+<!-- REASON 2: PSYCHOLOGY -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Reason #2</div>
+    <h2 class="fade">Poor Psychology Under Real Stakes</h2>
+    <p class="fade">A demo account has no consequences. A funded challenge has a daily loss limit, a max drawdown, and — if you fail — the cost of buying another challenge. That pressure changes decision-making even when traders don't consciously feel it.</p>
+    <p class="fade">The most common pattern: a trader who is calm and rule-following on demo becomes hesitant, second-guessing, or impulsive on a funded account. They either freeze and miss good setups, or they force trades because they feel they need to "do something."</p>
+
+    <!-- Psychology states illustration -->
+    <div class="illus fade">
+      <svg viewBox="0 0 660 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#181410">
+        <text x="330" y="20" font-family="DM Sans" font-size="9" fill="#6B5F50" text-anchor="middle" font-weight="700" letter-spacing="1.5">DEMO MINDSET vs FUNDED MINDSET</text>
+        <!-- Demo side -->
+        <rect x="30" y="32" width="270" height="64" rx="10" fill="rgba(62,207,122,0.06)" stroke="rgba(62,207,122,0.2)" stroke-width="1.5"/>
+        <text x="165" y="52" font-family="DM Sans" font-size="9" fill="#3ECF7A" text-anchor="middle" font-weight="700" letter-spacing="0.5">ON DEMO</text>
+        <text x="165" y="70" font-family="DM Sans" font-size="9.5" fill="#D4C8B8" text-anchor="middle">Calm · Patient · Rule-following</text>
+        <text x="165" y="86" font-family="DM Sans" font-size="8.5" fill="#6B5F50" text-anchor="middle">No real consequences</text>
+        <!-- Arrow -->
+        <text x="330" y="68" font-family="DM Sans" font-size="16" fill="#C9A07A" text-anchor="middle">→</text>
+        <!-- Funded side -->
+        <rect x="360" y="32" width="270" height="64" rx="10" fill="rgba(224,85,85,0.06)" stroke="rgba(224,85,85,0.2)" stroke-width="1.5"/>
+        <text x="495" y="52" font-family="DM Sans" font-size="9" fill="#E05555" text-anchor="middle" font-weight="700" letter-spacing="0.5">ON FUNDED ACCOUNT</text>
+        <text x="495" y="70" font-family="DM Sans" font-size="9.5" fill="#D4C8B8" text-anchor="middle">Hesitant or impulsive</text>
+        <text x="495" y="86" font-family="DM Sans" font-size="8.5" fill="#6B5F50" text-anchor="middle">Same setups, different mind</text>
+      </svg>
+    </div>
+
+    <div class="reason-card rc-2 fade">
+      <div class="reason-icon">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+          <circle cx="20" cy="20" r="17" fill="none" stroke="#F5C842" stroke-width="2" opacity="0.3"/>
+          <circle cx="20" cy="20" r="17" fill="none" stroke="#F5C842" stroke-width="2" stroke-dasharray="20 86" stroke-linecap="round" transform="rotate(-90 20 20)"/>
+          <line x1="20" y1="20" x2="20" y2="10" stroke="#F5C842" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="20" x2="27" y2="24" stroke="#F5C842" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="2" fill="#F5C842"/>
+        </svg>
+      </div>
+      <div class="reason-content">
+        <div class="reason-title">Fear of the daily loss limit</div>
+        <div class="reason-desc">Constantly checking how close you are to the limit pulls focus away from reading the market. The fear itself causes the mistakes it's afraid of.</div>
+      </div>
+    </div>
+    <div class="reason-card rc-2 fade">
+      <div class="reason-icon">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+          <circle cx="20" cy="20" r="17" fill="none" stroke="#F5C842" stroke-width="2" opacity="0.25"/>
+          <circle cx="20" cy="20" r="11" fill="none" stroke="#F5C842" stroke-width="2" opacity="0.45"/>
+          <circle cx="20" cy="20" r="5" fill="none" stroke="#F5C842" stroke-width="2"/>
+          <line x1="32" y1="8" x2="23" y2="17" stroke="#F5C842" stroke-width="2" stroke-linecap="round"/>
+          <path d="M32 8 L32 13 M32 8 L27 8" stroke="#F5C842" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="reason-content">
+        <div class="reason-title">Forcing trades to "make progress"</div>
+        <div class="reason-desc">Feeling like you need to hit your profit target by a certain day leads to taking lower-quality setups that wouldn't normally meet your criteria.</div>
+      </div>
+    </div>
+
+    <div class="callout c-tip fade">
+      <div class="c-label">What Helps</div>
+      <p>Treat the funded account exactly like your backtested demo — same rules, same position sizing, same patience. If a setup wouldn't meet your criteria on demo, it shouldn't meet it on a funded account either. The account size doesn't change the rules of your strategy.</p>
+    </div>
+  </div>
+</div>
+
+<!-- REASON 3: RISK PER TRADE -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Reason #3</div>
+    <h2 class="fade">Risking Too Much Per Trade</h2>
+    <p class="fade">With a 5% daily loss limit on most prop firms, the math is unforgiving. Risking 2-3% on a single trade means just two losses can end your trading day — or worse, breach the limit entirely. Risking 0.5-1% per trade gives you room to be wrong multiple times and still have a normal day.</p>
+
+    <!-- Risk per trade illustration -->
+    <div class="illus fade">
+      <svg viewBox="0 0 660 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#1E1A13">
+        <text x="330" y="20" font-family="DM Sans" font-size="9" fill="#6B5F50" text-anchor="middle" font-weight="700" letter-spacing="1.5">RISK PER TRADE vs DAILY LOSS LIMIT (5%)</text>
+        <!-- High risk -->
+        <text x="24" y="50" font-family="DM Sans" font-size="9" fill="#E05555" font-weight="600">2.5% per trade</text>
+        <rect x="160" y="38" width="100" height="20" rx="4" fill="rgba(224,85,85,0.2)" stroke="rgba(224,85,85,0.4)" stroke-width="1"/>
+        <text x="210" y="52" font-family="DM Sans" font-size="8" fill="#E05555" text-anchor="middle" font-weight="700">Loss 1</text>
+        <rect x="264" y="38" width="100" height="20" rx="4" fill="rgba(224,85,85,0.2)" stroke="rgba(224,85,85,0.4)" stroke-width="1"/>
+        <text x="314" y="52" font-family="DM Sans" font-size="8" fill="#E05555" text-anchor="middle" font-weight="700">Loss 2 — Limit Hit ⚠</text>
+        <text x="385" y="52" font-family="DM Sans" font-size="8" fill="#9A8A78">Only 2 trades possible</text>
+
+        <!-- Low risk -->
+        <text x="24" y="95" font-family="DM Sans" font-size="9" fill="#3ECF7A" font-weight="600">0.5% per trade</text>
+        <rect x="160" y="83" width="48" height="20" rx="4" fill="rgba(62,207,122,0.18)" stroke="rgba(62,207,122,0.35)" stroke-width="1"/>
+        <text x="184" y="97" font-family="DM Sans" font-size="7.5" fill="#3ECF7A" text-anchor="middle" font-weight="700">L1</text>
+        <rect x="212" y="83" width="48" height="20" rx="4" fill="rgba(62,207,122,0.18)" stroke="rgba(62,207,122,0.35)" stroke-width="1"/>
+        <text x="236" y="97" font-family="DM Sans" font-size="7.5" fill="#3ECF7A" text-anchor="middle" font-weight="700">L2</text>
+        <rect x="264" y="83" width="48" height="20" rx="4" fill="rgba(62,207,122,0.18)" stroke="rgba(62,207,122,0.35)" stroke-width="1"/>
+        <text x="288" y="97" font-family="DM Sans" font-size="7.5" fill="#3ECF7A" text-anchor="middle" font-weight="700">L3</text>
+        <rect x="316" y="83" width="48" height="20" rx="4" fill="rgba(62,207,122,0.18)" stroke="rgba(62,207,122,0.35)" stroke-width="1"/>
+        <text x="340" y="97" font-family="DM Sans" font-size="7.5" fill="#3ECF7A" text-anchor="middle" font-weight="700">L4</text>
+        <rect x="368" y="83" width="48" height="20" rx="4" fill="rgba(62,207,122,0.18)" stroke="rgba(62,207,122,0.35)" stroke-width="1"/>
+        <text x="392" y="97" font-family="DM Sans" font-size="7.5" fill="#3ECF7A" text-anchor="middle" font-weight="700">L5</text>
+        <rect x="420" y="83" width="48" height="20" rx="4" fill="rgba(62,207,122,0.1)" stroke="rgba(62,207,122,0.25)" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="444" y="97" font-family="DM Sans" font-size="7.5" fill="#6B5F50" text-anchor="middle">Room left</text>
+        <text x="500" y="97" font-family="DM Sans" font-size="8" fill="#3ECF7A" font-weight="700">10 trades still possible</text>
+      </svg>
+    </div>
+
+    <p class="fade">This is also where <strong>lot size limits</strong> come in. Some prop firms cap maximum lot size or require lower leverage on certain instruments — particularly around high-impact news events. Not knowing these limits and oversizing a position can trigger an automatic violation regardless of whether the trade would have won or lost.</p>
+
+    <div class="callout c-key fade">
+      <div class="c-label">Practical Rule</div>
+      <p>Use our <a href="/calculators.html">position size calculator</a> before every trade — no exceptions. Calculate your exact lot size based on account balance, risk percentage, and stop loss distance. Check your prop firm's specific lot size limits for the instrument you're trading, especially during high-impact news windows.</p>
+    </div>
+  </div>
+</div>
+
+<!-- REASON 4: NEWS CALENDAR -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Reason #4</div>
+    <h2 class="fade">Ignoring the News Calendar</h2>
+    <p class="fade">High-impact news events — red folder items on the economic calendar — can move price 50-100 pips in seconds. A position sized correctly for normal volatility can blow through a stop loss during a major release, or trigger slippage that turns a small loss into a daily-limit-ending one.</p>
+    <p class="fade">This applies to both forex and futures. NFP, CPI, FOMC rate decisions — these events don't care about your strategy's win rate. The simplest habit that prevents this: <strong>check the calendar before every session</strong>, know what's scheduled, and either avoid trading through it or reduce position size significantly.</p>
+
+    <!-- Pre-session checklist illustration -->
+    <div class="illus fade">
+      <svg viewBox="0 0 660 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#181410">
+        <text x="330" y="20" font-family="DM Sans" font-size="9" fill="#6B5F50" text-anchor="middle" font-weight="700" letter-spacing="1.5">PRE-SESSION ROUTINE — 5 MINUTES</text>
+        <rect x="20" y="32" width="150" height="60" rx="8" fill="rgba(201,160,122,0.07)" stroke="rgba(201,160,122,0.2)" stroke-width="1"/>
+        <text x="95" y="55" font-family="DM Sans" font-size="9" fill="#C9A07A" text-anchor="middle" font-weight="700">📅 Check Calendar</text>
+        <text x="95" y="72" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">Any red folder events</text>
+        <text x="95" y="84" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">today?</text>
+        <text x="180" y="65" font-family="DM Sans" font-size="13" fill="#6B5F50" text-anchor="middle">→</text>
+        <rect x="195" y="32" width="150" height="60" rx="8" fill="rgba(201,160,122,0.07)" stroke="rgba(201,160,122,0.2)" stroke-width="1"/>
+        <text x="270" y="55" font-family="DM Sans" font-size="9" fill="#C9A07A" text-anchor="middle" font-weight="700">📊 Check HTF Structure</text>
+        <text x="270" y="72" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">Where is price relative</text>
+        <text x="270" y="84" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">to key levels?</text>
+        <text x="355" y="65" font-family="DM Sans" font-size="13" fill="#6B5F50" text-anchor="middle">→</text>
+        <rect x="370" y="32" width="150" height="60" rx="8" fill="rgba(201,160,122,0.07)" stroke="rgba(201,160,122,0.2)" stroke-width="1"/>
+        <text x="445" y="55" font-family="DM Sans" font-size="9" fill="#C9A07A" text-anchor="middle" font-weight="700">🧮 Calculate Risk</text>
+        <text x="445" y="72" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">Position size for</text>
+        <text x="445" y="84" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">today's conditions</text>
+        <text x="530" y="65" font-family="DM Sans" font-size="13" fill="#3ECF7A" text-anchor="middle">→</text>
+        <rect x="545" y="32" width="95" height="60" rx="8" fill="rgba(62,207,122,0.08)" stroke="rgba(62,207,122,0.3)" stroke-width="1.5"/>
+        <text x="592" y="58" font-family="DM Sans" font-size="9.5" fill="#3ECF7A" text-anchor="middle" font-weight="700">Trade with</text>
+        <text x="592" y="72" font-family="DM Sans" font-size="9.5" fill="#3ECF7A" text-anchor="middle" font-weight="700">clarity ✓</text>
+      </svg>
+    </div>
+
+    <div class="callout c-warn fade">
+      <div class="c-label">⚠ News Trading Note</div>
+      <p>Some prop firms restrict or prohibit holding positions through major news releases, or reduce maximum position sizes during these windows. Check your specific firm's rules — this varies between FTMO, FundingPips, and futures-focused firms. Trading through news without knowing the rule is one of the most common accidental violations.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKLIST -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Summary</div>
+    <h2 class="fade">The Pass-Rate Checklist</h2>
+    <p class="fade">Before you start a challenge — and every day during it — run through this:</p>
+
+    <div class="checklist fade">
+      <div class="check-item">
+        <div class="check-box">✓</div>
+        <div class="check-text"><strong>Risk 0.5–1% per trade</strong>, never more — calculate it with a tool, don't estimate</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box">✓</div>
+        <div class="check-text"><strong>Check the economic calendar</strong> every morning before your session for red folder events</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box">✓</div>
+        <div class="check-text"><strong>Step away for 15–30 minutes after any loss</strong> — no immediate "make it back" trades</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box">✓</div>
+        <div class="check-text"><strong>Know your firm's lot size limits</strong>, especially around news events</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box">✓</div>
+        <div class="check-text"><strong>Trade your demo strategy exactly</strong> — same criteria, same patience, same rules</div>
+      </div>
+      <div class="check-item">
+        <div class="check-box">✓</div>
+        <div class="check-text"><strong>Track every trade</strong> in a journal — patterns in your mistakes only become visible with data</div>
+      </div>
+    </div>
+
+    <p class="fade">None of this is complicated. It's also not exciting — which is exactly why most traders skip it and why most challenges fail. The traders who pass aren't the ones with the most sophisticated strategies. They're the ones who follow a boring, repeatable process under pressure.</p>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="cta-sec">
+  <div class="cta-glow"></div>
+  <div class="cta-box fade">
+    <div class="cta-title">Ready to Start Your Challenge?</div>
+    <div class="cta-sub">Calculate your position sizes before you start, and pick a firm that matches how you trade.</div>
+    <div class="cta-btns">
+      <a href="/calculators.html" class="btn btn-p">Position Size Calculator →</a>
+      <a href="/blog-best-prop-firms-beginners.html" class="btn btn-g">Best Prop Firms 2026</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="fb">TRADERS<span>NAV</span></span>
+  <p><a href="/">Home</a> &nbsp;·&nbsp; <a href="/blog.html">Guides</a> &nbsp;·&nbsp; <a href="/about.html">About</a> &nbsp;·&nbsp; <a href="/disclaimer.html">Disclaimer</a></p>
+  <div class="fdis">Nothing on TradersNav constitutes financial advice. Trading involves significant risk of loss. Always check your specific prop firm's rules before trading.</div>
+  <p style="margin-top:0.5rem;font-size:0.68rem;color:var(--mid)">© 2026 TradersNav. All rights reserved.</p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}
+  }), {threshold:0.05,rootMargin:'0px 0px -20px 0px'});
+  document.querySelectorAll('.fade').forEach((el,i) => {
+    el.style.transitionDelay = Math.min(i*0.035,0.25)+'s';
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
