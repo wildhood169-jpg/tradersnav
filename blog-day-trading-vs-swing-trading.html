@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Day Trading vs Swing Trading — Which Style Fits You? | TradersNav</title>
+  <meta name="description" content="Day trading and swing trading both work — but they demand completely different things from you. Time, capital, psychology and prop firm compatibility compared honestly."/>
+  <link rel="canonical" href="https://tradersnav.co/blog-day-trading-vs-swing-trading.html"/>
+  <link rel="icon" type="image/png" href="/favicon.png"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8YJ6YRH1E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N8YJ6YRH1E');</script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --rose:#C9A07A;--rose-b:#E8B87A;--rose-l:#F0D0A0;
+      --dark:#13100C;--d2:#181410;--d3:#1E1A13;--d4:#242018;
+      --text:#F0EAE0;--text2:#D4C8B8;--muted:#9A8A78;--mid:#6B5F50;
+      --border:rgba(201,160,122,0.15);--border2:rgba(201,160,122,0.25);
+      --green:#3ECF7A;--gdim:rgba(62,207,122,0.1);
+      --red:#E05555;--rdim:rgba(224,85,85,0.1);
+      --blue:#6AADDF;--bdim:rgba(106,173,223,0.1);
+      --purple:#A87FD4;--pdim:rgba(168,127,212,0.1);
+      --day:#F5A623;--daydim:rgba(245,166,35,0.1);
+      --swing:#6AADDF;--swingdim:rgba(106,173,223,0.1);
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--dark);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+    .page-ambient{position:fixed;inset:0;pointer-events:none;z-index:0;
+      background:radial-gradient(ellipse 55% 40% at 80% 5%,rgba(245,166,35,0.07) 0%,transparent 55%),
+      radial-gradient(ellipse 50% 35% at 15% 85%,rgba(106,173,223,0.07) 0%,transparent 55%)}
+
+    nav{position:sticky;top:0;z-index:100;background:rgba(19,16,12,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;letter-spacing:0.08em;color:var(--text);text-decoration:none}
+    .nav-logo span{color:var(--rose)}
+    .nav-back{padding:0.4rem 0.9rem;border:1px solid var(--border);border-radius:50px;color:var(--muted);font-size:0.76rem;text-decoration:none;transition:all 0.2s}
+    .nav-back:hover{color:var(--rose);border-color:var(--border2)}
+
+    .hero{position:relative;overflow:hidden;padding:4.5rem 1.5rem 3rem;z-index:1;
+      background:radial-gradient(ellipse 80% 55% at 50% -5%,rgba(201,160,122,0.1) 0%,transparent 65%)}
+    .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,160,122,0.3),transparent)}
+    .hero-inner{max-width:700px;margin:0 auto;position:relative;z-index:1;text-align:center}
+    .cat-pill{display:inline-flex;align-items:center;gap:0.45rem;font-size:0.63rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose);background:rgba(201,160,122,0.08);border:1px solid var(--border2);padding:0.3rem 0.9rem;border-radius:50px;margin-bottom:1.75rem}
+    .cat-pill::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--rose);animation:pdot 2s ease-in-out infinite}
+    @keyframes pdot{0%,100%{opacity:1}50%{opacity:0.35}}
+    h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,6.5vw,3.3rem);font-weight:700;line-height:1.12;margin-bottom:1.25rem;background:linear-gradient(160deg,#FFF 0%,var(--rose-l) 55%,var(--rose) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-tagline{font-size:1rem;color:var(--muted);line-height:1.7;max-width:500px;margin:0 auto 2rem}
+    .hero-meta{display:inline-flex;gap:0;flex-wrap:wrap;justify-content:center;font-size:0.72rem;color:var(--muted);background:rgba(201,160,122,0.05);border:1px solid var(--border);border-radius:50px;overflow:hidden}
+    .hero-meta span{padding:0.5rem 1rem;border-right:1px solid var(--border)}
+    .hero-meta span:last-child{border-right:none}
+
+    /* VS STRIP */
+    .vs-wrap{max-width:700px;margin:0 auto;padding:2rem 1.5rem 0;position:relative;z-index:1}
+    .vs-strip{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center}
+    .vs-side{border-radius:14px;padding:1.25rem;text-align:center;position:relative;overflow:hidden}
+    .vs-side::before{content:'';position:absolute;top:0;left:0;right:0;height:1px}
+    .vs-day{background:rgba(245,166,35,0.08);border:1px solid rgba(245,166,35,0.3)}
+    .vs-day::before{background:linear-gradient(90deg,transparent,rgba(245,166,35,0.6),transparent)}
+    .vs-swing{background:rgba(106,173,223,0.08);border:1px solid rgba(106,173,223,0.3)}
+    .vs-swing::before{background:linear-gradient(90deg,transparent,rgba(106,173,223,0.6),transparent)}
+    .vs-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;margin-bottom:0.25rem}
+    .vs-day .vs-name{color:var(--day)}
+    .vs-swing .vs-name{color:var(--swing)}
+    .vs-sub{font-size:0.7rem;color:var(--muted)}
+    .vs-center{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--rose);text-align:center}
+
+    .sep{height:55px;position:relative;z-index:1;display:flex;align-items:center;justify-content:center}
+    .sep::before{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,160,122,0.2),transparent)}
+    .sep-dot{width:6px;height:6px;border-radius:50%;background:var(--rose);box-shadow:0 0 10px rgba(201,160,122,0.5);position:relative;z-index:1;animation:pulse-dot 2.5s ease-in-out infinite}
+    @keyframes pulse-dot{0%,100%{box-shadow:0 0 10px rgba(201,160,122,0.5)}50%{box-shadow:0 0 20px rgba(201,160,122,0.8)}}
+
+    .sec{padding:2.5rem 1.5rem;position:relative;z-index:1}
+    .sec-alt{background:var(--d2)}
+    .sec-inner{max-width:700px;margin:0 auto}
+    .eyebrow{font-size:0.6rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem}
+    .eyebrow::before{content:'';width:18px;height:1px;background:var(--rose)}
+    h2{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:700;color:var(--text);margin-bottom:0.75rem;line-height:1.2}
+    p{font-size:0.92rem;color:var(--text2);line-height:1.85;margin-bottom:1rem}
+    p:last-child{margin-bottom:0}
+    strong{color:var(--rose-l);font-weight:600}
+    a{color:var(--rose);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .comp-row{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin:1.25rem 0}
+    @media(max-width:480px){.comp-row{grid-template-columns:1fr}}
+    .comp-card{border-radius:12px;padding:1.1rem;position:relative;overflow:hidden}
+    .comp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px}
+    .cc-day{background:rgba(245,166,35,0.07);border:1px solid rgba(245,166,35,0.2)}
+    .cc-day::before{background:linear-gradient(90deg,transparent,rgba(245,166,35,0.4),transparent)}
+    .cc-swing{background:rgba(106,173,223,0.07);border:1px solid rgba(106,173,223,0.2)}
+    .cc-swing::before{background:linear-gradient(90deg,transparent,rgba(106,173,223,0.4),transparent)}
+    .cc-label{font-size:0.6rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.5rem}
+    .cc-day .cc-label{color:var(--day)}
+    .cc-swing .cc-label{color:var(--swing)}
+    .cc-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:0.35rem}
+    .cc-desc{font-size:0.8rem;color:var(--muted);line-height:1.55}
+
+    .illus{background:var(--d3);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:1.5rem 0}
+
+    .callout{border-radius:12px;padding:1rem 1.2rem;margin:1.25rem 0;position:relative;overflow:hidden}
+    .callout::before{content:'';position:absolute;top:0;left:0;right:0;height:1px}
+    .c-key{background:rgba(201,160,122,0.07);border:1px solid var(--border2);border-left:3px solid var(--rose)}
+    .c-key::before{background:linear-gradient(90deg,var(--rose),transparent)}
+    .c-tip{background:var(--gdim);border:1px solid rgba(62,207,122,0.25);border-left:3px solid var(--green)}
+    .c-tip::before{background:linear-gradient(90deg,var(--green),transparent)}
+    .c-label{font-size:0.59rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.4rem}
+    .c-key .c-label{color:var(--rose)}
+    .c-tip .c-label{color:var(--green)}
+    .callout p{font-size:0.88rem;line-height:1.65;margin:0;color:var(--text2)}
+
+    /* WHO CARDS */
+    .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+    @media(max-width:480px){.who-grid{grid-template-columns:1fr}}
+    .who-card{border-radius:14px;padding:1.25rem;position:relative;overflow:hidden}
+    .who-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+    .wc-day{background:rgba(245,166,35,0.07);border:1px solid rgba(245,166,35,0.25)}
+    .wc-day::before{background:linear-gradient(90deg,transparent,var(--day),transparent)}
+    .wc-swing{background:rgba(106,173,223,0.07);border:1px solid rgba(106,173,223,0.25)}
+    .wc-swing::before{background:linear-gradient(90deg,transparent,var(--swing),transparent)}
+    .wc-label{font-size:0.6rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.5rem}
+    .wc-day .wc-label{color:var(--day)}
+    .wc-swing .wc-label{color:var(--swing)}
+    .wc-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:0.6rem}
+    .wc-list{list-style:none;display:flex;flex-direction:column;gap:0.35rem}
+    .wc-list li{font-size:0.8rem;color:var(--text2);display:flex;align-items:flex-start;gap:0.4rem;line-height:1.45}
+    .wc-day .wc-list li::before{content:'✓';color:var(--day);font-size:0.7rem;flex-shrink:0;margin-top:0.1rem}
+    .wc-swing .wc-list li::before{content:'✓';color:var(--swing);font-size:0.7rem;flex-shrink:0;margin-top:0.1rem}
+
+    .cta-sec{padding:3rem 1.5rem;background:var(--d2);position:relative;z-index:1;overflow:hidden}
+    .cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:400px;height:250px;background:radial-gradient(ellipse,rgba(201,160,122,0.08) 0%,transparent 65%);pointer-events:none}
+    .cta-box{max-width:620px;margin:0 auto;text-align:center;background:linear-gradient(145deg,rgba(201,160,122,0.1),rgba(201,160,122,0.03));border:1px solid var(--border2);border-radius:18px;padding:2.25rem;position:relative;overflow:hidden}
+    .cta-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--rose),transparent)}
+    .cta-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--text);margin-bottom:0.5rem}
+    .cta-sub{font-size:0.86rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.65}
+    .cta-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:0.7rem 1.4rem;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;border-radius:9px;text-decoration:none;transition:all 0.2s}
+    .btn-p{background:linear-gradient(135deg,var(--rose),var(--rose-b));color:#1A1208;box-shadow:0 4px 16px rgba(201,160,122,0.25)}
+    .btn-p:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(201,160,122,0.35);text-decoration:none}
+    .btn-g{border:1px solid var(--border);color:var(--muted)}
+    .btn-g:hover{border-color:var(--rose);color:var(--rose);text-decoration:none}
+
+    footer{background:var(--d2);border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;font-size:0.74rem;color:var(--muted);line-height:1.9;position:relative;z-index:1}
+    footer a{color:var(--rose);text-decoration:none}
+    .fb{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text);display:block;margin-bottom:0.5rem;font-weight:700;letter-spacing:0.08em}
+    .fb span{color:var(--rose)}
+    .fdis{font-size:0.69rem;color:var(--mid);max-width:540px;margin:0.75rem auto 0;line-height:1.65}
+
+    .fade{opacity:0;transform:translateY(14px);transition:opacity 0.55s ease,transform 0.55s ease}
+    .fade.in{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+<div class="page-ambient"></div>
+<nav>
+  <a href="/" class="nav-logo">TRADERS<span>NAV</span></a>
+  <a href="/blog.html" class="nav-back">← All Guides</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="cat-pill fade">Strategy</div>
+    <h1 class="fade">Day Trading vs Swing Trading —<br>Which Style Fits You?</h1>
+    <p class="hero-tagline fade">Both work. But they demand completely different things from you — time, psychology, capital and screen presence. Here's the honest comparison.</p>
+    <div class="hero-meta fade">
+      <span>📅 June 2026</span>
+      <span>⏱ 6 min read</span>
+      <span>✍️ TradersNav</span>
+    </div>
+  </div>
+</div>
+
+<!-- VS STRIP -->
+<div class="vs-wrap fade">
+  <div class="vs-strip">
+    <div class="vs-side vs-day">
+      <div class="vs-name">Day Trading</div>
+      <div class="vs-sub">In and out same session</div>
+    </div>
+    <div class="vs-center">VS</div>
+    <div class="vs-side vs-swing">
+      <div class="vs-name">Swing Trading</div>
+      <div class="vs-sub">Hours to days in trade</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT IS EACH -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec">
+  <div class="sec-inner">
+    <div class="eyebrow fade">The Basics</div>
+    <h2 class="fade">What Each Style Actually Means</h2>
+
+    <div class="comp-row fade">
+      <div class="comp-card cc-day">
+        <div class="cc-label">☀ Day Trading</div>
+        <div class="cc-title">All trades closed by end of session</div>
+        <div class="cc-desc">You enter and exit within the same trading session — often within minutes to a few hours. No positions held overnight. Suited for lower timeframe setups (M1 to H1), high focus periods, and traders who can dedicate screen time during market hours.</div>
+      </div>
+      <div class="comp-card cc-swing">
+        <div class="cc-label">🌙 Swing Trading</div>
+        <div class="cc-title">Trades held hours to several days</div>
+        <div class="cc-desc">You enter on structure from higher timeframes and hold through the swing — which may last hours, a day, or several days. More suited to traders who can't be at the screen all day, or who prefer larger moves with wider stops.</div>
+      </div>
+    </div>
+
+    <!-- Timeframe visual -->
+    <div class="illus fade">
+      <svg viewBox="0 0 660 90" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#1E1A13">
+        <text x="330" y="18" font-family="DM Sans" font-size="9" fill="#6B5F50" text-anchor="middle" font-weight="700" letter-spacing="1.5">TYPICAL TIMEFRAMES USED</text>
+        <text x="24" y="42" font-family="DM Sans" font-size="9" fill="#F5A623" font-weight="600">Day Trading</text>
+        <rect x="130" y="30" width="50" height="20" rx="4" fill="rgba(245,166,35,0.2)" stroke="rgba(245,166,35,0.4)" stroke-width="1"/>
+        <text x="155" y="43" font-family="DM Sans" font-size="8.5" fill="#F5A623" text-anchor="middle" font-weight="700">M1</text>
+        <rect x="188" y="30" width="50" height="20" rx="4" fill="rgba(245,166,35,0.2)" stroke="rgba(245,166,35,0.4)" stroke-width="1"/>
+        <text x="213" y="43" font-family="DM Sans" font-size="8.5" fill="#F5A623" text-anchor="middle" font-weight="700">M5</text>
+        <rect x="246" y="30" width="50" height="20" rx="4" fill="rgba(245,166,35,0.2)" stroke="rgba(245,166,35,0.4)" stroke-width="1"/>
+        <text x="271" y="43" font-family="DM Sans" font-size="8.5" fill="#F5A623" text-anchor="middle" font-weight="700">M15</text>
+        <rect x="304" y="30" width="50" height="20" rx="4" fill="rgba(245,166,35,0.15)" stroke="rgba(245,166,35,0.3)" stroke-width="1"/>
+        <text x="329" y="43" font-family="DM Sans" font-size="8.5" fill="#F5A623" text-anchor="middle" font-weight="700">H1</text>
+        <text x="24" y="80" font-family="DM Sans" font-size="9" fill="#6AADDF" font-weight="600">Swing Trading</text>
+        <rect x="130" y="68" width="50" height="20" rx="4" fill="rgba(106,173,223,0.15)" stroke="rgba(106,173,223,0.3)" stroke-width="1"/>
+        <text x="155" y="81" font-family="DM Sans" font-size="8.5" fill="#6AADDF" text-anchor="middle" font-weight="700">H1</text>
+        <rect x="188" y="68" width="50" height="20" rx="4" fill="rgba(106,173,223,0.2)" stroke="rgba(106,173,223,0.4)" stroke-width="1"/>
+        <text x="213" y="81" font-family="DM Sans" font-size="8.5" fill="#6AADDF" text-anchor="middle" font-weight="700">H4</text>
+        <rect x="246" y="68" width="50" height="20" rx="4" fill="rgba(106,173,223,0.2)" stroke="rgba(106,173,223,0.4)" stroke-width="1"/>
+        <text x="271" y="81" font-family="DM Sans" font-size="8.5" fill="#6AADDF" text-anchor="middle" font-weight="700">D1</text>
+        <rect x="304" y="68" width="50" height="20" rx="4" fill="rgba(106,173,223,0.15)" stroke="rgba(106,173,223,0.3)" stroke-width="1"/>
+        <text x="329" y="81" font-family="DM Sans" font-size="8.5" fill="#6AADDF" text-anchor="middle" font-weight="700">W1</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- TIME COMMITMENT -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Time Commitment</div>
+    <h2 class="fade">How Much Screen Time Each Needs</h2>
+    <p class="fade">This is the most practical difference — and the one most traders underestimate when choosing a style.</p>
+
+    <div class="illus fade">
+      <svg viewBox="0 0 660 110" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#181410">
+        <text x="330" y="18" font-family="DM Sans" font-size="9" fill="#6B5F50" text-anchor="middle" font-weight="700" letter-spacing="1.5">DAILY TIME REQUIREMENT</text>
+        <!-- Day trading -->
+        <text x="24" y="46" font-family="DM Sans" font-size="9" fill="#F5A623" font-weight="600">Day Trading</text>
+        <rect x="150" y="34" width="400" height="22" rx="5" fill="rgba(245,166,35,0.15)" stroke="rgba(245,166,35,0.35)" stroke-width="1"/>
+        <text x="350" y="48" font-family="DM Sans" font-size="8.5" fill="#F5A623" text-anchor="middle" font-weight="600">2–6 hours active screen time per session</text>
+        <text x="560" y="48" font-family="DM Sans" font-size="8" fill="#9A8A78">High</text>
+        <!-- Swing trading -->
+        <text x="24" y="86" font-family="DM Sans" font-size="9" fill="#6AADDF" font-weight="600">Swing Trading</text>
+        <rect x="150" y="74" width="160" height="22" rx="5" fill="rgba(106,173,223,0.15)" stroke="rgba(106,173,223,0.35)" stroke-width="1"/>
+        <text x="230" y="88" font-family="DM Sans" font-size="8.5" fill="#6AADDF" text-anchor="middle" font-weight="600">30–60 mins daily</text>
+        <text x="320" y="88" font-family="DM Sans" font-size="8" fill="#9A8A78">Low — set and monitor</text>
+      </svg>
+    </div>
+
+    <div class="comp-row fade">
+      <div class="comp-card cc-day">
+        <div class="cc-label">☀ Day Trading Time</div>
+        <div class="cc-title">Full attention during sessions</div>
+        <div class="cc-desc">London open, New York open, overlap — you need to be at the screen. Can't do this with a full-time job. Best for traders who can dedicate blocks of focused time.</div>
+      </div>
+      <div class="comp-card cc-swing">
+        <div class="cc-label">🌙 Swing Trading Time</div>
+        <div class="cc-title">Set up, manage, move on</div>
+        <div class="cc-desc">Check the charts once or twice a day, set your levels, manage open trades. Works well alongside a day job or other commitments. Lower intensity, longer patience required.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PSYCHOLOGY -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Psychology</div>
+    <h2 class="fade">The Mental Demand of Each Style</h2>
+    <p class="fade">The psychological profiles are genuinely different. Day trading demands fast decision-making, the ability to take losses quickly and reset, and resistance to the constant noise of short timeframe price action. Swing trading demands patience — the ability to sit in a trade through small pullbacks without panicking out.</p>
+
+    <!-- Psychology comparison -->
+    <div class="illus fade">
+      <svg viewBox="0 0 660 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#1E1A13">
+        <text x="330" y="18" font-family="DM Sans" font-size="9" fill="#6B5F50" text-anchor="middle" font-weight="700" letter-spacing="1.5">PSYCHOLOGICAL DEMANDS</text>
+        <!-- Day -->
+        <rect x="20" y="28" width="290" height="80" rx="10" fill="rgba(245,166,35,0.05)" stroke="rgba(245,166,35,0.2)" stroke-width="1.5"/>
+        <text x="165" y="48" font-family="DM Sans" font-size="9" fill="#F5A623" text-anchor="middle" font-weight="700">DAY TRADING</text>
+        <text x="165" y="64" font-family="DM Sans" font-size="8.5" fill="#D4C8B8" text-anchor="middle">Fast decision making</text>
+        <text x="165" y="78" font-family="DM Sans" font-size="8.5" fill="#D4C8B8" text-anchor="middle">Cut losses quickly · Stay disciplined</text>
+        <text x="165" y="92" font-family="DM Sans" font-size="8.5" fill="#D4C8B8" text-anchor="middle">Ignore short-term noise</text>
+        <text x="165" y="104" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">Intensity: High</text>
+        <!-- Swing -->
+        <rect x="350" y="28" width="290" height="80" rx="10" fill="rgba(106,173,223,0.05)" stroke="rgba(106,173,223,0.2)" stroke-width="1.5"/>
+        <text x="495" y="48" font-family="DM Sans" font-size="9" fill="#6AADDF" text-anchor="middle" font-weight="700">SWING TRADING</text>
+        <text x="495" y="64" font-family="DM Sans" font-size="8.5" fill="#D4C8B8" text-anchor="middle">Patience through pullbacks</text>
+        <text x="495" y="78" font-family="DM Sans" font-size="8.5" fill="#D4C8B8" text-anchor="middle">Trust your analysis · Hold the trade</text>
+        <text x="495" y="92" font-family="DM Sans" font-size="8.5" fill="#D4C8B8" text-anchor="middle">Resist urge to exit early</text>
+        <text x="495" y="104" font-family="DM Sans" font-size="8" fill="#9A8A78" text-anchor="middle">Intensity: Medium — but long duration</text>
+      </svg>
+    </div>
+
+    <div class="callout c-key fade">
+      <div class="c-label">The Honest Truth</div>
+      <p>Most traders think they want to day trade because it sounds exciting. Many discover they actually prefer swing trading once they've tried both — the lower pressure and fewer decisions per day suits a wider range of personalities. Neither is better. Know yourself before choosing.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PROP FIRM COMPATIBILITY -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec sec-alt">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Prop Trading</div>
+    <h2 class="fade">Which Works Better for Prop Firm Challenges?</h2>
+    <p class="fade">Both styles work on prop firm accounts — but they interact differently with the rules. This is worth understanding before you choose.</p>
+
+    <div class="illus fade">
+      <svg viewBox="0 0 660 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#181410">
+        <text x="330" y="18" font-family="DM Sans" font-size="9" fill="#6B5F50" text-anchor="middle" font-weight="700" letter-spacing="1.5">PROP FIRM CHALLENGE COMPATIBILITY</text>
+        <rect x="0" y="25" width="660" height="25" fill="rgba(201,160,122,0.05)"/>
+        <text x="24" y="41" font-family="DM Sans" font-size="8.5" fill="#9A8A78" font-weight="700">FACTOR</text>
+        <text x="260" y="41" font-family="DM Sans" font-size="8.5" fill="#F5A623" font-weight="700">DAY TRADING</text>
+        <text x="460" y="41" font-family="DM Sans" font-size="8.5" fill="#6AADDF" font-weight="700">SWING TRADING</text>
+        <line x1="0" y1="50" x2="660" y2="50" stroke="rgba(201,160,122,0.08)" stroke-width="1"/>
+        <text x="24" y="68" font-family="DM Sans" font-size="9" fill="#D4C8B8">Daily loss limit risk</text>
+        <text x="260" y="68" font-family="DM Sans" font-size="9" fill="#F5A623">Higher — more trades per day</text>
+        <text x="460" y="68" font-family="DM Sans" font-size="9" fill="#3ECF7A">Lower — fewer decisions</text>
+        <line x1="0" y1="78" x2="660" y2="78" stroke="rgba(201,160,122,0.06)" stroke-width="1"/>
+        <text x="24" y="96" font-family="DM Sans" font-size="9" fill="#D4C8B8">Overnight holding</text>
+        <text x="260" y="96" font-family="DM Sans" font-size="9" fill="#3ECF7A">Not needed ✓</text>
+        <text x="460" y="96" font-family="DM Sans" font-size="9" fill="#F5A623">Required — check firm rules</text>
+        <line x1="0" y1="106" x2="660" y2="106" stroke="rgba(201,160,122,0.06)" stroke-width="1"/>
+        <text x="24" y="124" font-family="DM Sans" font-size="9" fill="#D4C8B8">News event risk</text>
+        <text x="260" y="124" font-family="DM Sans" font-size="9" fill="#F5A623">Higher — active during sessions</text>
+        <text x="460" y="124" font-family="DM Sans" font-size="9" fill="#6AADDF">Managed with wider stops</text>
+      </svg>
+    </div>
+
+    <div class="callout c-tip fade">
+      <div class="c-label">Prop Firm Note</div>
+      <p>Check your firm's overnight holding rules before swing trading a challenge. <a href="/blog-ftmo-review.html">FTMO</a> and <a href="/blog-fundingpips-review.html">FundingPips</a> both allow weekend holding — but some firms have restrictions. Always verify before holding a trade past the session close.</p>
+    </div>
+  </div>
+</div>
+
+<!-- WHO IS EACH FOR -->
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="sec">
+  <div class="sec-inner">
+    <div class="eyebrow fade">Which Is Right for You</div>
+    <h2 class="fade">The Decision Framework</h2>
+
+    <div class="who-grid fade">
+      <div class="who-card wc-day">
+        <div class="wc-label">☀ Choose Day Trading if...</div>
+        <div class="wc-title">You have time and thrive under pressure</div>
+        <ul class="wc-list">
+          <li>You can dedicate 2–6 hours per session</li>
+          <li>You make quick decisions comfortably</li>
+          <li>You don't want overnight exposure</li>
+          <li>You prefer quick feedback on your trades</li>
+          <li>You trade during London or NY sessions</li>
+        </ul>
+      </div>
+      <div class="who-card wc-swing">
+        <div class="wc-label">🌙 Choose Swing Trading if...</div>
+        <div class="wc-title">You have limited time but strong patience</div>
+        <ul class="wc-list">
+          <li>You have a job or other daily commitments</li>
+          <li>You prefer fewer, higher-quality setups</li>
+          <li>You're comfortable holding through pullbacks</li>
+          <li>You like analysing higher timeframe structure</li>
+          <li>Lower daily intensity suits your lifestyle</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout c-key fade">
+      <div class="c-label">The Real Answer</div>
+      <p>Most successful traders try both before settling. Start with swing trading if you're new — fewer decisions, more time to think, less daily pressure. Once you have a profitable edge and the psychological resilience, layer in shorter timeframe trades if that appeals. The style should fit your life, not the other way around.</p>
+    </div>
+  </div>
+</div>
+
+<div class="sep"><div class="sep-dot"></div></div>
+<div class="cta-sec">
+  <div class="cta-glow"></div>
+  <div class="cta-box fade">
+    <div class="cta-title">Ready to Apply Your Style?</div>
+    <div class="cta-sub">Pick the right prop firm for how you trade — and use our calculator before every entry.</div>
+    <div class="cta-btns">
+      <a href="/blog-best-prop-firms-beginners.html" class="btn btn-p">Best Prop Firms 2026 →</a>
+      <a href="/calculators.html" class="btn btn-g">Position Size Calculator</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="fb">TRADERS<span>NAV</span></span>
+  <p><a href="/">Home</a> &nbsp;·&nbsp; <a href="/blog.html">Guides</a> &nbsp;·&nbsp; <a href="/about.html">About</a> &nbsp;·&nbsp; <a href="/disclaimer.html">Disclaimer</a></p>
+  <div class="fdis">Nothing on TradersNav constitutes financial advice. Trading involves significant risk of loss.</div>
+  <p style="margin-top:0.5rem;font-size:0.68rem;color:var(--mid)">© 2026 TradersNav. All rights reserved.</p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}
+  }), {threshold:0.05,rootMargin:'0px 0px -20px 0px'});
+  document.querySelectorAll('.fade').forEach((el,i) => {
+    el.style.transitionDelay = Math.min(i*0.035,0.25)+'s';
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
